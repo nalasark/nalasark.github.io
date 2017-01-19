@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Six Revisions">
   <meta name="description" content="Portfolio.">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://www.queness.com/resources/html/simple-portfolio-page/css/normalize.css">
   <script src="js/jquery.mixitup.min.js"></script>
 
   <link rel="icon" href="http://sixrevisions.com/favicon.ico" type="image/x-icon" />
@@ -17,9 +18,9 @@
   <![endif]-->
 
   <!-- responsive-full-background-image.css stylesheet contains the code you want -->
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../CSS/presentational-only.css">
- <link rel="stylesheet" href="../CSS/portfolio.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="CSS/presentational-only.css">
+ <link rel="stylesheet" href="CSS/portfolio.css">
 
  <script>
      $(function () {
@@ -36,7 +37,7 @@
               filter: '.filter' 
             },
             load: {
-              filter: '.app' // show app tab on first load
+              filter: '.program, .product, .design, .film' // show app tab on first load
             }     
           });               
         
@@ -70,39 +71,117 @@
 
 <div id="portfoliolist">
 
-  <div class="portfolio 1" data-cat="program">
+  <div class="portfolio program" data-cat="program">
     <div class="portfolio-wrapper">
-      <img src="images/github.png" alt="" />
+      <img src="images/portfolio/gesture.jpg" alt="" />
       <div class="label">
         <div class="label-text">
-          <a class="text-title">Gesture Interaction R&D Internship</a> 
-          <span class="text-category">Programming</span>
+          <a class="text-title">Gesture R&D Internship</a> 
+          <span class="text-category">Urban Redevelopment Authority</span>
         </div>
         <div class="label-bg"> </div>
       </div>
     </div>
   </div>
 
-    <div class="portfolio 2" data-cat="product">
+    <div class="portfolio program" data-cat="program">
     <div class="portfolio-wrapper">
-      <img src="images/github.png" alt="" />
+      <img src="images/portfolio/UROP.jpg" alt="" />
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Mixed Reality Undergraduate Research</a> 
+          <span class="text-category">SUTD-MIT International Design Center</span>
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="portfolio product" data-cat="product">
+    <div class="portfolio-wrapper">
+      <img src="images/portfolio/sleeptaut.jpg" alt="" />
       <div class="label">
         <div class="label-text">
           <a class="text-title">Sleep Taut</a> 
-          <span class="text-category">Product</span>
+          <span class="text-category">Champion | HDB Smart Cool Ideas (University level)</span>
         </div>
         <div class="label-bg"> </div>
       </div>
     </div>
   </div>
 
-    <div class="portfolio 3" data-cat="design">
+    <div class="portfolio design" data-cat="design">
     <div class="portfolio-wrapper">
-      <img src="images/github.png" alt="" />
+      <img src="images/portfolio/artfest.jpg" alt="" />
       <div class="label">
         <div class="label-text">
           <a class="text-title">SUTD Art Festival 2016</a> 
-          <span class="text-category">Art & Design</span>
+          <span class="text-category">Programme Head: Exhibit & Events</span>
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio design" data-cat="design">
+    <div class="portfolio-wrapper">
+      <img src="images/portfolio/parkingday.jpg" alt="" />
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Parking Day</a> 
+          <span class="text-category">SUTD x URA: Project Director</span>
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio design" data-cat="design">
+    <div class="portfolio-wrapper">
+      <img src="images/portfolio/sutdio.jpg" alt="" />
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">SUTDio: Art, Architecture, Design Club</a> 
+          <span class="text-category">Director</span>
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio product" data-cat="product">
+    <div class="portfolio-wrapper">
+      <img src="images/portfolio/spacehack.jpg" alt="" />
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Exercising in Space Ecosystem</a> 
+          <span class="text-category">1st Place | SpaceHack! Design Competition for Space Habitats</span>
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio product" data-cat="product">
+    <div class="portfolio-wrapper">
+      <img src="images/portfolio/SALS.jpg" alt="" />
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Smart Adjustable Locker Spaces</a> 
+          <span class="text-category">'A' Grade | 3.007 Introduction to Design </span>
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="portfolio design" data-cat="design">
+    <div class="portfolio-wrapper">
+      <img src="images/portfolio/dcarn.jpg" alt="" />
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Dunman High School Open House</a> 
+          <span class="text-category">Lead Designer</span>
         </div>
         <div class="label-bg"> </div>
       </div>
@@ -111,12 +190,7 @@
 
 </div>
 
-  <header class="container">
-    <section class="content">
-      <p><a class="button" id="load-more-content" href="/">go back</a></p>
-    </section>
-  </header>
-  
+
 </body>
 
 
