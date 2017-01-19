@@ -126,11 +126,11 @@ blockquote cite {
   font-size: 1.2vw;
   display: inline-block;
   padding: 7px 14px;
-  color: #cafaea;
-  border: 1px solid black;
+  color: black;
+  border: 1px solid #cafaea;
   border-radius: 8px;
-  background-color: black;
-  font-weight: 200;
+  background-color: #cafaea;
+  font-weight: 400;
   line-height: normal;
   text-decoration: none;
   text-align: center;

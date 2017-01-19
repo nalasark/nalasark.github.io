@@ -3,7 +3,7 @@ body {
   background-image: url(images/background.jpg);
   
   /* Image is centered vertically and horizontally at all times */
-  background-position: center center;
+  background-position: top center;
   
   /* Image doesn't repeat */
   background-repeat: no-repeat;
