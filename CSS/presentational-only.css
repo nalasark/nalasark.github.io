@@ -16,33 +16,32 @@ html, body, h1, p, a, div, section {
 
 /* Basic */
 body { 
-  font-family: "Titilium Web", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   color: black;
-}
-
-h1 {
-  color: black;
-  text-transform: uppercase;
-  font-size: 40px;
-  line-height: 50px;
-  margin-top: 20px;
-}
-
-#title {
-  font-size: 3  0px;
-  font-weight: 900;
-}
-#name {
-  font-size: 50px;
-  font-weight: 200;
-}
-
-a {
-  color: #ffffff;
 }
 
 p {
-  margin: 0 0 15px 0;
+  color: black;
+  text-align: center;
+}
+
+#name {
+  font-size: 50px;
+  font-size: 5vw;
+  font-weight: 200;
+  line-height: 2.2vw;
+}
+
+#title {
+  font-size: 38px;
+  font-size: 3.8vw; 
+  font-weight: 900;
+  line-height: 6vw;
+}
+
+
+a {
+  color: #ffffff;
 }
 
 strong {
@@ -105,29 +104,37 @@ blockquote cite {
 
 .content {
   display: table-cell;
-  vertical-align: middle;
+  padding-top: 3%;
   text-align: center;
 }
 
 /* Special */
-.sub-title {
-  margin: 50px auto;
+#year {
+  margin: 30px auto;
   font-size: 18px;
   line-height: 23px;
-  text-transform: uppercase;
+  color: white;
+}
+
+#sub {
+  font-size: 18px;
+  line-height: 23px;
+  color: white;
 }
 
 .button {
+  font-size: 1.2vw;
   display: inline-block;
-  padding: 6px 10px;
+  padding: 7px 14px;
   color: #cafaea;
-  border: 1px solid #cafaea;
-  border-radius: 3px;
-  font-weight: 700;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: black;
+  font-weight: 200;
   line-height: normal;
   text-decoration: none;
   text-align: center;
-  text-transform: uppercase;
+  margin-bottom: 10%;
 }
 
 #more-content {
