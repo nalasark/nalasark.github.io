@@ -8,6 +8,7 @@
   <meta name="author" content="Six Revisions">
   <meta name="description" content="Portfolio.">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/jquery.mixitup.min.js"></script>
 
   <link rel="icon" href="http://sixrevisions.com/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,400,900" rel="stylesheet">
@@ -18,7 +19,37 @@
   <!-- responsive-full-background-image.css stylesheet contains the code you want -->
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../CSS/presentational-only.css">
- 
+ <link rel="stylesheet" href="../CSS/portfolio.css">
+
+ <script>
+     $(function () {
+        
+      var filterList = {
+      
+        init: function () {
+        
+          // MixItUp plugin
+          // http://mixitup.io
+          $('#portfoliolist').mixItUp({
+            selectors: {
+              target: '.portfolio',
+              filter: '.filter' 
+            },
+            load: {
+              filter: '.app' // show app tab on first load
+            }     
+          });               
+        
+        }
+
+      };
+      
+      // Run the show!
+      filterList.init();
+      
+    }); 
+</script>
+
 </head>
 
 
@@ -28,7 +59,58 @@
       <a href="http://linkedIn.com/in/ngyijunalan"><img border="0" alt="LinkedIn" src="images/linkedin.png" width="30" height="30"></a> 
     </div>
   </nav>
-  
+
+  <ul id="filters" class="clearfix">
+<li><span class="filter active" data-filter=".program, .product, .design, .film">All</span></li>
+<li><span class="filter" data-filter=".program">Programming</span></li>
+<li><span class="filter" data-filter=".product">Product</span></li>
+<li><span class="filter" data-filter=".design">Art & Design</span></li>
+<li><span class="filter" data-filter=".film">Film</span></li>
+</ul>
+
+<div id="portfoliolist">
+
+  <div class="portfolio 1" data-cat="program">
+    <div class="portfolio-wrapper">
+      <img src="images/github.png" alt="" />
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Gesture Interaction R&D Internship</a> 
+          <span class="text-category">Programming</span>
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="portfolio 2" data-cat="product">
+    <div class="portfolio-wrapper">
+      <img src="images/github.png" alt="" />
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Sleep Taut</a> 
+          <span class="text-category">Product</span>
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="portfolio 3" data-cat="design">
+    <div class="portfolio-wrapper">
+      <img src="images/github.png" alt="" />
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">SUTD Art Festival 2016</a> 
+          <span class="text-category">Art & Design</span>
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
   <header class="container">
     <section class="content">
       <p><a class="button" id="load-more-content" href="/">go back</a></p>
