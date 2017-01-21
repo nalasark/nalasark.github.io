@@ -136,62 +136,52 @@ p {
 }
 
 /* Media Queries */
-@media only screen and (max-width: 340px) {
+
+@media only screen and (max-height: 900px) {
   
+  #name {
+    font-size:60px;
+  }
+  #intro {
+    font-size:20px;
 
-  .container {
-    position: relative;
-    display: block;
-    float: left;
-    vertical-align: baseline;
-    margin: 0 auto;
-    padding: 80px 0 0 0;
-  }
-  
-  #more-content {
-    float: left;
-    margin-right: 10px;
-    
-  }
-  
-  body h1 {
-    font-size: 18px;
-    line-height: 23px;
-  } 
-  
-  .content, blockquote {  
-    display: inline;
-    margin: 0 auto;
-    padding-top: 80px;
-    vertical-align: baseline;
   }
 
-  blockquote {
-    width: 150px;
-    margin: 15px auto;
-    font-size: 16px;
-    line-height: 21px;
-    background-color: transparent;
-  }
-
-  blockquote cite {
-    font-size: 14px;
-    line-height: 19px;
-  }
-
-  .sub-title {
-    font-size: 14px;
-    line-height: 21px;
-  }
-
-  .button, p {
-    max-width: 150px;
-    margin: 0 auto;
-    font-size: 15px;
-    line-height: 20px;
-  }
-
-  html, body, .container {
-    height: auto;
+  .button {
+    font-size:25px;
   }
 }
+
+@media only screen and (max-height: 400px) {
+  
+  .container {
+    padding-top:30px;
+  }
+  #name {
+    font-size:40px;
+  }
+  #intro {
+    font-size:15px;
+
+  }
+
+  .button {
+    font-size:20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  
+  #name {
+    font-size:40px;
+  }
+  #intro {
+    font-size:15px;
+
+  }
+
+  .button {
+font-size:20px;
+  }
+}
+

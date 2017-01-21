@@ -53,7 +53,7 @@ html {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
-	width:15%;
+	width:265px;
 	margin:1% 1% 1% 1%;
 	display:none;
 	float:left;
@@ -142,4 +142,6 @@ html {
 	.container {
 		width: 70%;
 	}
+
+	
 }
