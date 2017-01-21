@@ -83,7 +83,7 @@ html {
 	}
 
 		.portfolio .label-bg {
-			background: rgba(137,137,137,0.8);
+			background: rgba(137,137,137,0.85);
 			width: 100%;
 			height:100%;
 			position: absolute;
@@ -102,15 +102,63 @@ html {
 	.portfolio .label-text2 {
 		z-index:555;
 		position: absolute;
-		width: auto;
+		width: 100%;
 		height: 25px;
 		padding: 5px 12px 0px 12px;
-		background: rgba(137,137,137,0.5);
+		background: rgba(137,137,137,0.8);
 		font-size:15px;
 		font-style:italic;
 		color:white;
 		top:0px;
 		left: 0px;
+	}
+
+
+	.program .label-bg{
+		background: rgba(69,140,204,0.85);
+	}
+	.product .label-bg{
+		background: rgba(96,92,168,0.85);
+	}
+	.design .label-bg{
+		background: rgba(244,152,157,0.85);
+	}
+	.film .label-bg{
+		background: rgba(251,174,92,0.85);
+	}
+
+	#filters .program.active {
+		background: rgba(69,140,204,1);
+		color:#fff;
+	}
+	#filters .product.active {
+		background: rgba(96,92,168,1);
+		color:#fff;
+	}
+	#filters .design.active {
+		background: rgba(244,152,157,1);
+		color:#fff;
+	}
+	#filters .film.active {
+		background: rgba(251,174,92,1);
+		color:#fff;
+	}
+
+
+	#filters .all{
+		border-right: 1px solid gray;
+	}
+	#filters .program{
+		border-right: 1px solid rgba(69,140,204,1);
+	}
+	#filters .product{
+		border-right: 1px solid rgba(96,92,168,1);
+	}
+	#filters .design{
+		border-right: 1px solid rgba(244,152,157,1);
+	}
+	#filters .film{
+		border-right: 1px solid rgba(251,174,92,1);
 	}
 
   .main {
@@ -143,5 +191,5 @@ html {
 		width: 70%;
 	}
 
-	
+
 }
