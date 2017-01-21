@@ -25,8 +25,7 @@ p {
 }
 
 #name {
-  font-size: 45px;
-  font-size: 3.9vw;
+  font-size: 75px;
   font-weight: 100;
   line-height: 2vmax;
   font-family: 'Arapey', serif;
@@ -34,7 +33,7 @@ p {
 
 #intro {
   margin-top: 5vh;
-  font-size: 1vmax;
+  font-size: 20px;
   font-family: 'Cormorant Infant', serif;
 }
 #break {
@@ -81,11 +80,11 @@ p {
 
 .button {
   margin-top: 3vh;
-  font-size: 1.1vmax;
+  font-size: 25px;
   font-family: 'arapey', serif;
   font-style:italic;
   display: inline-block;
-  padding: 5px 10px;
+  padding: 8px 14px;
   color: black;
   border-radius:7px;
   border: 1px solid #b7e3ff;
@@ -139,6 +138,7 @@ p {
 /* Media Queries */
 @media only screen and (max-width: 340px) {
   
+
   .container {
     position: relative;
     display: block;
