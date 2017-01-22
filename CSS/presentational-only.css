@@ -60,7 +60,7 @@ p {
 
 .navbar a {
   display: inline-block;  
-  padding: 2px 15px;
+  padding: 2px 8px;
   margin-top: 5px;
 }
 
@@ -79,20 +79,28 @@ p {
 /* Special */
 
 .button {
+  margin:5px;
   margin-top: 3vh;
-  font-size: 25px;
-  font-family: 'arapey', serif;
+  font-size: 22px;
+  font-family: 'titillium', sans-serif;
   font-style:italic;
   display: inline-block;
   padding: 8px 14px;
   color: black;
   border-radius:7px;
   border: 1px solid #b7e3ff;
-  font-weight: 400;
+  border-bottom: 2px solid #85d5e1;
+  font-weight: 300;
   line-height: normal;
   text-decoration: none;
   text-align: center;
   background: #b7e3ff ;
+}
+
+.about {
+  border: 1px solid #ffd3b5;
+  background: #ffd3b5;
+  border-bottom: 2px solid #fcc771;  
 }
 
 .hvr-sweep-to-top {
@@ -127,6 +135,10 @@ p {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
+.about.hvr-sweep-to-top:before{
+  background: #fcc771;
+}
+
 .hvr-sweep-to-top:hover, .hvr-sweep-to-top:focus, .hvr-sweep-to-top:active {
   color: white;
 }

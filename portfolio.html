@@ -37,7 +37,7 @@
               filter: '.filter' 
             },
             load: {
-              filter: '.program, .product, .design, .film' // show app tab on first load
+              filter: '.selected' // show app tab on first load
             }     
           });               
         
@@ -50,6 +50,15 @@
       
     }); 
 </script>
+<script> 
+$(function () {
+    if ($('span.selected').hasClass('active')) {
+        $('#portfoliolist .portfolio').addClass('.change');
+      } else {
+        $('#portfoliolist .portfolio').removeClass('.change');
+      }
+    })
+  </script>
 
 </head>
 
@@ -58,24 +67,26 @@
   <nav class="navbar">
     <div class="inner">
       <a href="http://linkedIn.com/in/ngyijunalan"><img border="0" alt="LinkedIn" src="images/linkedin.png" width="30" height="30"></a> 
+      <a href="mailto:alannyj@gmail.com><img border="0" alt="Contact" src="images/mail.png" width="30" height="30"></a>
     </div>
   </nav>
 
   <div class="main">
 
   <ul id="filters" class="clearfix">
-<li><span class="filter all active" data-filter=".program, .product, .design, .film">All</span></li>
+<li><span class="filter selected active" data-filter=".selected">Selected Works</span></li>
 <li><span class="filter program" data-filter=".program">Programming</span></li>
 <li><span class="filter product" data-filter=".product">Product</span></li>
 <li><span class="filter design" data-filter=".design">Art & Design</span></li>
 <li><span class="filter film" data-filter=".film">Film</span></li>
+<li><span class="filter all" data-filter=".program, .product, .design, .film">All</span></li>
 </ul>
 
 <div id="portfoliolist">
 
-  <div class="portfolio program" data-cat="program">
+  <div class="portfolio program selected" data-cat="program">
     <div class="portfolio-wrapper">
-      <img src="images/portfolio/gesture.jpg" alt="" />
+      <a href="/gesture"> <img src="images/portfolio/gesture.jpg" alt="" /> </a>
       <div class="label">
         <div class="label-text">
           <a class="text-title">Gesture R&D Internship</a> 
@@ -85,7 +96,7 @@
     </div>
   </div>
 
-    <div class="portfolio program" data-cat="program">
+    <div class="portfolio program selected" data-cat="program">
     <div class="portfolio-wrapper">
       <img src="images/portfolio/UROP.jpg" alt="" />
       <div class="label">
@@ -97,8 +108,19 @@
     </div>
   </div>
 
+  <div class="portfolio film selected" data-cat="film">
+    <div class="portfolio-wrapper">
+      <img src="images/portfolio/scripted.jpg" alt="" />
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Scripted Short</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
 
-    <div class="portfolio product" data-cat="product">
+    <div class="portfolio product selected" data-cat="product">
     <div class="portfolio-wrapper">
       <div class="label-text2">
           <a class="text-title">Champion</a>
@@ -129,7 +151,7 @@
     </div>
   </div>
 
-  <div class="portfolio design" data-cat="design">
+  <div class="portfolio design selected" data-cat="design">
     <div class="portfolio-wrapper">
               <div class="label-text2">
           <a class="text-title">Project Director</a>
@@ -144,7 +166,7 @@
     </div>
   </div>
   
-    <div class="portfolio design" data-cat="design">
+    <div class="portfolio design selected" data-cat="design">
     <div class="portfolio-wrapper">
               <div class="label-text2">
           <a class="text-title">Programme Director</a>
@@ -159,7 +181,7 @@
     </div>
   </div>
 
-  <div class="portfolio product" data-cat="product">
+  <div class="portfolio product selected" data-cat="product">
     <div class="portfolio-wrapper">
           <div class="label-text2">
           <a class="text-title">1st Place</a>
@@ -229,7 +251,7 @@
     </div>
   </div>
 
-    <div class="portfolio design" data-cat="design">
+    <div class="portfolio design selected" data-cat="design">
     <div class="portfolio-wrapper">
                   <div class="label-text2">
           <a class="text-title">Co-Founder, Lead Designer</a>
@@ -244,7 +266,7 @@
     </div>
   </div>
 
-      <div class="portfolio design" data-cat="design">
+      <div class="portfolio design selected" data-cat="design">
     <div class="portfolio-wrapper">
                   <div class="label-text2">
           <a class="text-title">Lead Designer</a>
