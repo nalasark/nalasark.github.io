@@ -28,13 +28,13 @@ p {
   font-size: 75px;
   font-weight: 100;
   line-height: 2vmax;
-  font-family: 'Arapey', serif;
+  font-family: 'oregano';
 }
 
 #intro {
   margin-top: 5vh;
   font-size: 20px;
-  font-family: 'Cormorant Infant', serif;
+  font-family: 'arapey';
 }
 #break {
   margin-top:4vh;  
@@ -81,8 +81,8 @@ p {
 .button {
   margin:5px;
   margin-top: 3vh;
-  font-size: 22px;
-  font-family: 'titillium', sans-serif;
+  font-size: 18px;
+  font-family: 'arapey';
   font-style:italic;
   display: inline-block;
   padding: 8px 14px;
@@ -90,7 +90,7 @@ p {
   border-radius:7px;
   border: 1px solid #b7e3ff;
   border-bottom: 2px solid #85d5e1;
-  font-weight: 300;
+  font-weight: 400;
   line-height: normal;
   text-decoration: none;
   text-align: center;

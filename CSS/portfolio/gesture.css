@@ -85,6 +85,14 @@ p.author {
 	 text-transform: uppercase;
 }
 
+.inner{
+  max-width:100%;
+  width: 100%;
+  display: block;
+  text-align: center;
+  }
+
+
 @media only screen and (max-width: 900px) {
 	 div {
 	 display: block;
@@ -110,4 +118,5 @@ p {
 p.pullquote {
 	 font-size: 16px;
 }
+
 
