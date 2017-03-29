@@ -125,12 +125,13 @@ html {
 	.product .portfolio-wrapper{
 		background: rgba(96,92,168,0.85);
 	}
-	.design .portfolio-wrapper{
-		background: rgba(244,152,157,0.85);
-	}
 	.film .portfolio-wrapper{
 		background: rgba(251,174,92,0.85);
 	}
+	.design .portfolio-wrapper{
+		background: rgba(244,152,157,0.85);
+	}
+
 
 	.program .label-bg{
 		background: rgba(69,140,204,0.85);
@@ -138,12 +139,13 @@ html {
 	.product .label-bg{
 		background: rgba(96,92,168,0.85);
 	}
-	.design .label-bg{
-		background: rgba(244,152,157,0.85);
-	}
 	.film .label-bg{
 		background: rgba(251,174,92,0.85);
 	}
+	.design .label-bg{
+		background: rgba(244,152,157,0.85);
+	}
+
 
 	#filters .program.active {
 		background: rgba(69,140,204,1);
