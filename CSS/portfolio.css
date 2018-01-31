@@ -169,6 +169,37 @@ a.back-to-home {
 		background: rgba(5,168,170,0.85);
 	}
 
+	#filters .VRAR:hover {
+		background: rgba(69,140,204,1);
+		color:#fff;
+		transition: background .2s ease-in;
+	}
+	#filters .CREATIVE:hover {
+		background: rgba(96,92,168,1);
+		color:#fff;
+		transition: background .2s ease-in;
+	}
+	#filters .DESIGN:hover {
+		background: rgba(244,152,157,1);
+		color:#fff;
+		transition: background .2s ease-in;
+	}
+	#filters .ENTRE:hover {
+		background: rgba(251,174,92,1);
+		color:#fff;
+		transition: background .2s ease-in;
+	}
+	#filters .COMP:hover {
+		background: rgba(237,126,118,1);
+		color:#fff;
+		transition: background .2s ease-in;
+	}
+	#filters .FILM:hover {
+		background: rgba(5,168,170,1);
+		color:#fff;
+		transition: background .2s ease-in;
+	}
+
 	#filters .VRAR.active {
 		background: rgba(69,140,204,1);
 		color:#fff;
