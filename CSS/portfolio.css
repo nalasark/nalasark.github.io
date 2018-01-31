@@ -327,9 +327,9 @@ a.back-to-home {
 @media only screen and (max-width: 520px){
 	
 	#filters {
-		font-size: 12px;
+		font-size: 11px;
 	}
 	.text-title {
-		font-size: 12px;
+		font-size: 11px;
 	}		
 }
