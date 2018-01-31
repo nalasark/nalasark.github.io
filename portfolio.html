@@ -18,7 +18,7 @@
   <script src="js/jquery.mixitup.min.js"></script>
 
   <link rel="icon" href="images/logo.jpg" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css?family=Arapey:400,400i|Cormorant+Infant" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arapey:400,400i|Cormorant+Infant|Montserrat|Open Sans" rel="stylesheet">
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -43,7 +43,7 @@
               filter: '.filter' 
             },
             load: {
-              filter: '.selected' // show app tab on first load
+              filter: '.VRAR' // show app tab on first load
             }     
           });               
         
@@ -80,87 +80,340 @@ $(function () {
 
   <div class="main">
 
-  <ul id="filters" class="clearfix">
-<li><span class="filter selected active" data-filter=".selected">Selected Works (10)</span></li>
-<li><span class="filter program" data-filter=".program">Programming & UI UX (9)</span></li>
-<li><span class="filter product" data-filter=".product">Product & Prototyping (5)</span></li>
-<li><span class="filter design" data-filter=".design">Art & Design (10)</span></li>
-<li><span class="filter film" data-filter=".film">Film (7)</span></li>
-<li><span class="filter all" data-filter=".program, .product, .design, .film">All (24)</span></li>
+<ul id="filters" class="clearfix">
+<li><span class="filter VRAR active" data-filter=".VRAR">VR/AR</span></li>
+<li><span class="filter CREATIVE" data-filter=".CREATIVE">Creative Technology</span></li>
+<li><span class="filter DESIGN" data-filter=".DESIGN">Design & UI UX</span></li>
+<li><span class="filter COMP" data-filter=".COMP">Competitions</span></li>
+<li><span class="filter ENTRE" data-filter=".ENTRE">Entreprenuership, Clubs & Events</span></li>
+<li><span class="filter FILM" data-filter=".FILM">Film</span></li>
 </ul>
 
 <div id="portfoliolist">
 
-  <div class="portfolio program selected" data-cat="program">
+<!-- start VR/AR !-->
+  <div class="portfolio VRAR" data-cat="VRAR">
     <div class="portfolio-wrapper">
-      <a href="/portfolio/gesture"> <img src="images/portfolio/gesture.jpg" alt="" /> </a>
+      <div class="label-text2">
+        <a class="text-title">4th Place</a>
+      </div>
+      <a href="/under-construction"> <img src="images/portfolio/globalvr1.gif" alt="" /></a> 
       <div class="label">
         <div class="label-text">
-          <a class="text-title">Gesture R&D Internship</a> 
+          <a class="text-title">Global VR Hackathon</a> 
         </div>
         <div class="label-bg"> </div>
       </div>
     </div>
   </div>
 
-    <div class="portfolio program selected" data-cat="program">
+  <div class="portfolio VRAR" data-cat="VRAR">
+    <div class="portfolio-wrapper">
+      <div class="label-text2">
+        <a class="text-title">1st Place</a>
+      </div>
+      <a href="/under-construction"> <img src="images/portfolio/varch.png" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Singapore VR Hackathon</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio VRAR" data-cat="VRAR">
+    <div class="portfolio-wrapper">
+      <a href="/under-construction"> <img src="images/portfolio/wonda.png" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">SEA WondaVR Film Hackathon</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio VRAR" data-cat="VRAR">
+    <div class="portfolio-wrapper">
+      <div class="label-text2">
+        <a class="text-title">1st Place</a>
+      </div>
+      <a href="/portfolio/spacehack"><img src="images/portfolio/spacehack2.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">SpaceHack</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio VRAR" data-cat="VRAR">
+    <div class="portfolio-wrapper">
+      <a href="/portfolio/gesture"> <img src="images/portfolio/gesture.gif" alt="" /> </a>
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Gesture UX Internship</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio VRAR" data-cat="VRAR">
     <div class="portfolio-wrapper">
       <a href="/portfolio/mixed-reality"> <img src="images/portfolio/UROP.jpg" alt="" /></a> 
       <div class="label">
         <div class="label-text">
-          <a class="text-title">Mixed Reality Research</a> 
+          <a class="text-title">Virtual Reality Research</a> 
         </div>
         <div class="label-bg"> </div>
       </div>
     </div>
   </div>
 
-  <div class="portfolio film selected" data-cat="film">
+  <!-- end VR/AR !-->
+  <!-- start Creative Technology !-->
+
+  <div class="portfolio CREATIVE" data-cat="CREATIVE">
     <div class="portfolio-wrapper">
-      <a href="/portfolio/scripted"><img src="images/portfolio/Scripted.jpg" alt="" /></a> 
+        <div class="label-text2">
+          <a class="text-title">Co-Founder, Creative Director</a>
+        </div>
+      <a href="/under-construction"><img src="images/portfolio/fulcrum1.jpg" alt="" /></a> 
       <div class="label">
         <div class="label-text">
-          <a class="text-title">Scripted Short Film</a> 
+          <a class="text-title">Fulcrum Sleeve (Reboot Lab)</a> 
         </div>
         <div class="label-bg"> </div>
       </div>
     </div>
   </div>
 
-    <div class="portfolio program product selected" data-cat="product">
+  <div class="portfolio CREATIVE" data-cat="CREATIVE">
+    <div class="portfolio-wrapper">
+      <div class="label-text2">
+        <a class="text-title">1st Place</a>
+      </div>
+      <a href="/portfolio/spacehack"><img src="images/portfolio/spacehack2.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">SpaceHack: Exercise in Space</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio CREATIVE" data-cat="CREATIVE">
     <div class="portfolio-wrapper">
       <div class="label-text2">
           <a class="text-title">1st Place</a>
-        </div>
+      </div>
       <a href="/portfolio/sleeptaut"><img src="images/portfolio/sleeptaut2.jpg" alt="" /></a> 
       <div class="label">
         <div class="label-text">
-          <a class="text-title">Sleep Taut</a>
+          <a class="text-title">HDB Cool Ideas: Sleep Taut</a>
         </div>
-
         <div class="label-bg"> </div>
       </div>
-
-
-
     </div>
   </div>
 
-    <div class="portfolio film" data-cat="film">
+  <div class="portfolio CREATIVE" data-cat="CREATIVE">
     <div class="portfolio-wrapper">
-      <a href="/under-construction"><img src="images/portfolio/482016.jpg" alt="" /></a> 
+        <div class="label-text2">
+          <a class="text-title">Top in Cohort</a>
+        </div>
+      <a href="/portfolio/SALS"><img src="images/portfolio/sals3.jpg" alt="" /></a> 
       <div class="label">
         <div class="label-text">
-          <a class="text-title">Recall Short Film</a> 
+          <a class="text-title">Smart Adjustable Locker Spaces</a> 
         </div>
         <div class="label-bg"> </div>
       </div>
     </div>
   </div>
 
-  <div class="portfolio design selected" data-cat="design">
+  <div class="portfolio CREATIVE" data-cat="CREATIVE">
+    <div class="portfolio-wrapper">
+        <div class="label-text2">
+          <a class="text-title">Co-Founder, Creative Director</a>
+        </div>
+      <a href="/portfolio/change-for-good"><img src="images/portfolio/cfg3.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Change For Good</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end Creative Technology !-->
+  <!-- start Design & UIUX !-->
+
+  <div class="portfolio DESIGN" data-cat="DESIGN">
+    <div class="portfolio-wrapper">
+      <a href="/portfolio/gesture"> <img src="images/portfolio/gesture.gif" alt="" /> </a>
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Gesture UX Internship</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio DESIGN" data-cat="DESIGN">
+    <div class="portfolio-wrapper">
+        <div class="label-text2">
+          <a class="text-title">1st Place</a>
+        </div>
+      <a href="/portfolio/hazedaze"><img src="images/portfolio/sghaze.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">YRS: Haze Daze Mobile Web App</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio DESIGN" data-cat="DESIGN">
+    <div class="portfolio-wrapper">
+      <a href="/under-construction"><img src="images/portfolio/cps.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">CPS Web Design</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio DESIGN" data-cat="DESIGN">
+    <div class="portfolio-wrapper">
+      <a href="/under-construction"><img src="images/portfolio/copenhagen.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Case Study Interactive Poster</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio DESIGN" data-cat="DESIGN">
+    <div class="portfolio-wrapper">
+        <div class="label-text2">
+          <a class="text-title">Club Executive, President</a>
+        </div>
+      <a href="/under-construction"><img src="images/portfolio/sutdio.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">SUTDio: Art, Architecture, Design Club</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio DESIGN" data-cat="DESIGN">
+    <div class="portfolio-wrapper">
+        <div class="label-text2">
+          <a class="text-title">Co-Founder, Creative Director</a>
+        </div>
+      <a href="/portfolio/change-for-good"><img src="images/portfolio/cfg3.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Change For Good</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio DESIGN" data-cat="DESIGN">
+    <div class="portfolio-wrapper">
+        <div class="label-text2">
+          <a class="text-title">Lead Designer</a>
+        </div>
+      <a href="/portfolio/dcarn"><img src="images/portfolio/dcarn.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Dunman High Open House 2014</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio DESIGN" data-cat="DESIGN">
+    <div class="portfolio-wrapper">
+      <a href="/under-construction"><img src="images/portfolio/dhour.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">D'Hour Magazine</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- end Design & UI UX !-->
+  <!-- start Entreprenuership, Club & Events !-->
+
+  <div class="portfolio ENTRE" data-cat="ENTRE">
+    <div class="portfolio-wrapper">
+        <div class="label-text2">
+          <a class="text-title">Co-Founder, Creative Director</a>
+        </div>
+      <a href="/under-construction"><img src="images/portfolio/fulcrum1.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Reboot Lab</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio ENTRE" data-cat="CREATIVE">
     <div class="portfolio-wrapper">
               <div class="label-text2">
+          <a class="text-title">Project Director</a>
+        </div>
+      <a href="/portfolio/parkingday16"><img src="images/portfolio/parkingday.jpg" alt=""></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Parking Day 2016</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio ENTRE" data-cat="ENTRE">
+    <div class="portfolio-wrapper">
+        <div class="label-text2">
+          <a class="text-title">Club Executive, President</a>
+        </div>
+      <a href="/under-construction"><img src="images/portfolio/sutdio.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">SUTDio: Art, Architecture, Design Club</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio ENTREN" data-cat="ENTRE">
+    <div class="portfolio-wrapper">
+      <div class="label-text2">
           <a class="text-title">Project Director</a>
         </div>
       <a href="/portfolio/parkingday16"><img src="images/portfolio/parkingday.jpg" alt="" /></a> 
@@ -172,8 +425,8 @@ $(function () {
       </div>
     </div>
   </div>
-  
-    <div class="portfolio design selected" data-cat="design">
+
+  <div class="portfolio ENTRE" data-cat="ENTRE">
     <div class="portfolio-wrapper">
               <div class="label-text2">
           <a class="text-title">Programme Director</a>
@@ -188,37 +441,7 @@ $(function () {
     </div>
   </div>
 
-  <div class="portfolio product selected" data-cat="product">
-    <div class="portfolio-wrapper">
-          <div class="label-text2">
-          <a class="text-title">1st Place</a>
-        </div>
-      <a href="/portfolio/spacehack"><img src="images/portfolio/spacehack2.jpg" alt="" /></a> 
-      <div class="label">
-        <div class="label-text">
-          <a class="text-title">Spacecraft Exercising Ecosystem</a> 
-        </div>
-        <div class="label-bg"> </div>
-      </div>
-    </div>
-  </div>
-
-    <div class="portfolio program product selected" data-cat="product">
-    <div class="portfolio-wrapper">
-              <div class="label-text2">
-          <a class="text-title">Top in Cohort</a>
-        </div>
-      <a href="/portfolio/SALS"><img src="images/portfolio/SALS2.jpg" alt="" /></a> 
-      <div class="label">
-        <div class="label-text">
-          <a class="text-title">Smart Adjustable Locker Spaces</a> 
-        </div>
-        <div class="label-bg"> </div>
-      </div>
-    </div>
-  </div>
-
-    <div class="portfolio design" data-cat="design">
+  <div class="portfolio ENTRE" data-cat="ENTRE">
     <div class="portfolio-wrapper">
               <div class="label-text2">
           <a class="text-title">Publicity Director</a>
@@ -233,22 +456,196 @@ $(function () {
     </div>
   </div>
 
-  <div class="portfolio design" data-cat="design">
+  <div class="portfolio ENTRE" data-cat="ENTRE">
     <div class="portfolio-wrapper">
-                  <div class="label-text2">
-          <a class="text-title">Co-Director</a>
+        <div class="label-text2">
+          <a class="text-title">Co-Founder, Creative Director</a>
         </div>
-      <a href="/under-construction"><img src="images/portfolio/sutdio.jpg" alt="" /></a> 
+      <a href="/portfolio/change-for-good"><img src="images/portfolio/cfg3.jpg" alt="" /></a> 
       <div class="label">
         <div class="label-text">
-          <a class="text-title">SUTDio: Art, Architecture, Design Club</a> 
+          <a class="text-title">Change For Good</a> 
         </div>
         <div class="label-bg"> </div>
       </div>
     </div>
   </div>
 
-    <div class="portfolio film" data-cat="film">
+  <div class="portfolio ENTRE" data-cat="ENTRE">
+    <div class="portfolio-wrapper">
+        <div class="label-text2">
+          <a class="text-title">Lead Designer</a>
+        </div>
+      <a href="/portfolio/dcarn"><img src="images/portfolio/dcarn.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Dunman High Open House 2014</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end Entreprenuership, Club & Events !-->
+  <!-- start Competitions !-->
+
+  <div class="portfolio COMP" data-cat="COMP">
+    <div class="portfolio-wrapper">
+        <div class="label-text2">
+          <a class="text-title">Finalist</a>
+        </div>
+      <a href="/under-construction"><img src="images/portfolio/noted.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">National Datavis Film Competition</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio COMP" data-cat="COMP">
+    <div class="portfolio-wrapper">
+      <div class="label-text2">
+        <a class="text-title">4th Place</a>
+      </div>
+      <a href="/under-construction"> <img src="images/portfolio/globalvr1.gif" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Global VR Hackathon</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio COMP" data-cat="COMP">
+    <div class="portfolio-wrapper">
+      <div class="label-text2">
+        <a class="text-title">1st Place</a>
+      </div>
+      <a href="/under-construction"> <img src="images/portfolio/varch.png" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Singapore VR Hackathon</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio COMP" data-cat="COMP">
+    <div class="portfolio-wrapper">
+      <a href="/under-construction"> <img src="images/portfolio/wonda.png" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">SEA WondaVR Film Hackathon</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio COMP" data-cat="COMP">
+    <div class="portfolio-wrapper">
+      <div class="label-text2">
+        <a class="text-title">1st Place</a>
+      </div>
+      <a href="/portfolio/spacehack"><img src="images/portfolio/spacehack2.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">SUTD SpaceHack</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio COMP" data-cat="COMP">
+    <div class="portfolio-wrapper">
+      <div class="label-text2">
+          <a class="text-title">1st Place</a>
+      </div>
+      <a href="/portfolio/sleeptaut"><img src="images/portfolio/sleeptaut2.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">HDB Cool Ideas: Sleep Taut</a>
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio COMP" data-cat="COMP">
+    <div class="portfolio-wrapper">
+        <div class="label-text2">
+          <a class="text-title">1st Place</a>
+        </div>
+      <a href="/portfolio/hazedaze"><img src="images/portfolio/sghaze.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">YRS: Haze Daze Mobile Web App</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end Competitions !-->
+  <!-- start Film !-->
+
+  <div class="portfolio FILM" data-cat="FILM">
+    <div class="portfolio-wrapper">
+        <div class="label-text2">
+          <a class="text-title">Finalist</a>
+        </div>
+      <a href="/under-construction"><img src="images/portfolio/noted.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">National Datavis Film Competition</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio FILM" data-cat="FILM">
+    <div class="portfolio-wrapper">
+      <a href="/under-construction"> <img src="images/portfolio/wonda.png" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">SEA VR Film Hackathon</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio FILM" data-cat="FILM">
+    <div class="portfolio-wrapper">
+      <a href="/portfolio/scripted"><img src="images/portfolio/Scripted.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Scripted Short Film</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio FILM" data-cat="FILM">
+    <div class="portfolio-wrapper">
+      <a href="/under-construction"><img src="images/portfolio/482016.jpg" alt="" /></a> 
+      <div class="label">
+        <div class="label-text">
+          <a class="text-title">Recall Short Film</a> 
+        </div>
+        <div class="label-bg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio FILM" data-cat="FILM">
     <div class="portfolio-wrapper">
       <a href="/under-construction"><img src="images/portfolio/482015.jpg" alt="" /></a> 
       <div class="label">
@@ -260,124 +657,7 @@ $(function () {
     </div>
   </div>
 
-    <div class="portfolio product selected film design" data-cat="design">
-    <div class="portfolio-wrapper">
-                  <div class="label-text2">
-          <a class="text-title">Co-Founder, Lead Designer</a>
-        </div>
-      <a href="/portfolio/change-for-good"><img src="images/portfolio/cfg.jpg" alt="" /></a> 
-      <div class="label">
-        <div class="label-text">
-          <a class="text-title">Change For Good</a> 
-        </div>
-        <div class="label-bg"> </div>
-      </div>
-    </div>
-  </div>
-
-      <div class="portfolio design selected" data-cat="design">
-    <div class="portfolio-wrapper">
-                  <div class="label-text2">
-          <a class="text-title">Lead Designer</a>
-        </div>
-      <a href="/portfolio/dcarn"><img src="images/portfolio/dcarn.jpg" alt="" /></a> 
-      <div class="label">
-        <div class="label-text">
-          <a class="text-title">Dunman High School Open House</a> 
-        </div>
-        <div class="label-bg"> </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="portfolio program" data-cat="program">
-    <div class="portfolio-wrapper">
-                      <div class="label-text2">
-          <a class="text-title">1st Place</a>
-        </div>
-      <a href="/portfolio/hazedaze"><img src="images/portfolio/yrs.jpg" alt="" /></a> 
-      <div class="label">
-        <div class="label-text">
-          <a class="text-title">Haze Daze Mobile Web App</a> 
-        </div>
-        <div class="label-bg"> </div>
-      </div>
-    </div>
-  </div>
-
-    <div class="portfolio film" data-cat="film">
-    <div class="portfolio-wrapper">
-      <a href="/under-construction"><img src="images/portfolio/orientationvid.jpg" alt="" /></a> 
-      <div class="label">
-        <div class="label-text">
-          <a class="text-title">One-take Dance Music Video</a> 
-        </div>
-        <div class="label-bg"> </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="portfolio design" data-cat="design">
-    <div class="portfolio-wrapper">
-      <a href="/under-construction"><img src="images/portfolio/dhour.jpg" alt="" /></a> 
-      <div class="label">
-        <div class="label-text">
-          <a class="text-title">D'Hour Magazine</a> 
-        </div>
-        <div class="label-bg"> </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="portfolio product program" data-cat="program">
-    <div class="portfolio-wrapper">
-      <a href="/under-construction"><img src="images/portfolio/soundcheckmate.jpg" alt="" /></a> 
-      <div class="label">
-        <div class="label-text">
-          <a class="text-title">Sound Check IOT Ecosystem</a> 
-        </div>
-        <div class="label-bg"> </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="portfolio program" data-cat="program">
-    <div class="portfolio-wrapper">
-      <a href="/under-construction"><img src="images/portfolio/travelapp.jpg" alt="" /></a> 
-      <div class="label">
-        <div class="label-text">
-          <a class="text-title">Travel App (design & development)</a> 
-        </div>
-        <div class="label-bg"> </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="portfolio design program" data-cat="program">
-    <div class="portfolio-wrapper">
-      <a href="/under-construction"><img src="images/portfolio/cps.jpg" alt="" /></a> 
-      <div class="label">
-        <div class="label-text">
-          <a class="text-title">CPS web design</a> 
-        </div>
-        <div class="label-bg"> </div>
-      </div>
-    </div>
-  </div>
-
-    <div class="portfolio design" data-cat="design">
-    <div class="portfolio-wrapper">
-      <a href="/under-construction"><img src="images/portfolio/copenhagen.jpg" alt="" /></a> 
-      <div class="label">
-        <div class="label-text">
-          <a class="text-title">Case Study Interactive Poster</a> 
-        </div>
-        <div class="label-bg"> </div>
-      </div>
-    </div>
-  </div>
-
-    <div class="portfolio film" data-cat="film">
+  <div class="portfolio FILM" data-cat="FILM">
     <div class="portfolio-wrapper">
       <a href="/under-construction"><img src="images/portfolio/tangovid.jpg" alt="" /></a> 
       <div class="label">
@@ -389,35 +669,18 @@ $(function () {
     </div>
   </div>
 
-    <div class="portfolio film program" data-cat="program">
+  <div class="portfolio FILM" data-cat="FILM">
     <div class="portfolio-wrapper">
-      <a href="/under-construction"><img src="images/portfolio/witycare.jpg" alt="" /></a> 
+      <a href="/under-construction"><img src="images/portfolio/orientationvid.jpg" alt="" /></a> 
       <div class="label">
         <div class="label-text">
-          <a class="text-title">WityCare: Wifi-tracking Robot</a> 
+          <a class="text-title">One-take Dance Music Video</a> 
         </div>
         <div class="label-bg"> </div>
       </div>
     </div>
   </div>
 
-    <div class="portfolio design" data-cat="design">
-    <div class="portfolio-wrapper">
-      <a href="/under-construction"><img src="images/portfolio/logos.jpg" alt="" /></a> 
-      <div class="label">
-        <div class="label-text">
-          <a class="text-title">Logo Designs</a> 
-        </div>
-        <div class="label-bg"> </div>
-      </div>
-    </div>
-  </div>
-
-    <div class="portfolio selected"  data-cat="">
-    <div class="portfolio-wrapper">
-      <a href="#"><img src="images/portfolio/more.jpg" alt="" /></a> 
-    </div>
-  </div>
 </div>
 
 </div>

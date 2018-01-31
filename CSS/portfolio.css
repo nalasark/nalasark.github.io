@@ -32,8 +32,7 @@ a.back-to-home {
 }
  
 #filters {
-	font-family: 'Arapey', serif;
-	font-style: italic;
+	font-family: 'Montserrat', serif;
 	margin:1%;
 	margin-left:6%;
 	margin-top:5%;
@@ -60,14 +59,14 @@ a.back-to-home {
 
 #portfoliolist {
 	margin-left: 5%;
-	font-family: 'Cormorant Infant', serif;
+	font-family: 'Open Sans', serif;
 }
 
 #portfoliolist .portfolio {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
-	width:265px;
+	width:350px;
 	margin:1% 1% 1% 1%;
 	display:none;
 	float:left;
@@ -85,7 +84,7 @@ a.back-to-home {
 		max-width:100%;
 		position: relative;
 		top:0px;
-			opacity: 1;
+		opacity: 1;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 	}
@@ -114,8 +113,8 @@ a.back-to-home {
 			color:#fff;
 			position: relative;
 			z-index:500;
-			padding:5px 8px;
-			font-size:15px;
+			padding:5px 9px;
+			font-size:14px;
 		}
 
 	.portfolio .label-text2 {
@@ -132,48 +131,66 @@ a.back-to-home {
 		left: 0px;
 	}
 
-	.program .portfolio-wrapper {
+	.VRAR .portfolio-wrapper {
 		background: rgba(69,140,204,0.85);
 	}
-	.product .portfolio-wrapper{
+	.CREATIVE .portfolio-wrapper{
 		background: rgba(96,92,168,0.85);
 	}
-	.film .portfolio-wrapper{
-		background: rgba(251,174,92,0.85);
-	}
-	.design .portfolio-wrapper{
+	.DESIGN .portfolio-wrapper{
 		background: rgba(244,152,157,0.85);
 	}
+	.ENTRE .portfolio-wrapper{
+		background: rgba(251,174,92,0.85);
+	}
+	.COMP .portfolio-wrapper{
+		background: rgba(237,126,118,0.85);
+	}
+	.FILM .portfolio-wrapper{
+		background: rgba(5,168,170,0.85);
+	}
 
-
-	.program .label-bg{
+	.VRAR .label-bg{
 		background: rgba(69,140,204,0.85);
 	}
-	.product .label-bg{
+	.CREATIVE .label-bg{
 		background: rgba(96,92,168,0.85);
 	}
-	.film .label-bg{
-		background: rgba(251,174,92,0.85);
-	}
-	.design .label-bg{
+	.DESIGN .label-bg{
 		background: rgba(244,152,157,0.85);
 	}
+	.ENTRE .label-bg{
+		background: rgba(251,174,92,0.85);
+	}
+	.COMP .label-bg{
+		background: rgba(237,126,118,0.85);
+	}
+	.FILM .label-bg{
+		background: rgba(5,168,170,0.85);
+	}
 
-
-	#filters .program.active {
+	#filters .VRAR.active {
 		background: rgba(69,140,204,1);
 		color:#fff;
 	}
-	#filters .product.active {
+	#filters .CREATIVE.active {
 		background: rgba(96,92,168,1);
 		color:#fff;
 	}
-	#filters .design.active {
+	#filters .DESIGN.active {
 		background: rgba(244,152,157,1);
 		color:#fff;
 	}
-	#filters .film.active {
+	#filters .ENTRE.active {
 		background: rgba(251,174,92,1);
+		color:#fff;
+	}
+	#filters .COMP.active {
+		background: rgba(237,126,118,1);
+		color:#fff;
+	}
+	#filters .FILM.active {
+		background: rgba(5,168,170,1);
 		color:#fff;
 	}
 
@@ -184,17 +201,23 @@ a.back-to-home {
 	#filters .all{
 		border-right: 1px solid gray;
 	}
-	#filters .program{
+	#filters .VRAR{
 		border-right: 1px solid rgba(69,140,204,1);
 	}
-	#filters .product{
+	#filters .CREATIVE{
 		border-right: 1px solid rgba(96,92,168,1);
 	}
-	#filters .design{
+	#filters .DESIGN{
 		border-right: 1px solid rgba(244,152,157,1);
 	}
-	#filters .film{
+	#filters .ENTRE{
 		border-right: 1px solid rgba(251,174,92,1);
+	}
+	#filters .COMP{
+		border-right: 1px solid rgba(237,126,118,1);
+	}
+	#filters .FILM{
+		border-right: 1px solid rgba(5,168,170,1);
 	}
 
   .main {
@@ -202,21 +225,38 @@ a.back-to-home {
   	margin: 0 auto;
   }
 
-  /* #Tablet (Portrait) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-	.container {
-		width: 768px; 
+@media only screen and (min-width: 1820px) {
+	.main {
+		margin-left: 17vw;
+		margin-right: 17vw;
 	}
 }
 
-/*  #Mobile (Portrait) - Note: Design for a width of 320px */
-@media only screen and (max-width: 767px) {
-	.container { 
-		width: 95%; 
+@media only screen and (min-width: 1500px)  and (max-width: 1820px) {
+	.main {
+		margin-left: 10vw;
+		margin-right: 10vw;
 	}
+}
+
+  /* #Tablet (Portrait) */
+@media only screen and (min-width: 768px) and (max-width: 1500px) {
+	.main {
+		margin-left: 2vw;
+		margin-right: 2vw;
+	}
+
+	#portfoliolist .portfolio {
+		width:30%;
+		margin:1%;
+	}	
+}
+
+/*  #Mobile (Portrait) - Note: Design for a width of 320px */
+@media only screen and (max-width: 900px) {
 	
 	#portfoliolist .portfolio {
-		width:48%;
+		width:45%;
 		margin:1%;
 	}		
 }
