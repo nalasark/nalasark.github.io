@@ -41,7 +41,7 @@
 <script>
 function goBack() {
     var prev = document.referrer;
-    if (prev.indexOf("nalasark.com/portfolio")!== -1) {
+    if (prev.indexOf("nalasark.com/portfolio")== -1) {
         window.location = '../portfolio';
     }  else {
         window.history.back();

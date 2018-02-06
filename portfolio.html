@@ -72,10 +72,10 @@ $(function () {
       }
     })
 
-$(document).ready(function() {
+$(function() {
    $("#filters span").click(function(e) {
-     window.location.hash = $(this).attr("id");
-     e.preventDefault();
+      var id = $(this).attr("id");
+      history.replaceState(null, null, '#'+id);
    });
 });
   </script>
@@ -111,7 +111,7 @@ $(document).ready(function() {
       <div class="label-text2">
         <a class="text-title">4th Place</a>
       </div>
-      <a href="/under-construction"> <img src="images/portfolio/globalvr1.gif" alt="" /></a> 
+      <a href="/portfolio/globalvr"> <img src="images/portfolio/globalvr1.gif" alt="" /></a> 
       <div class="label">
         <div class="label-text">
           <a class="text-title">Global VR Hackathon</a> 
@@ -150,7 +150,7 @@ $(document).ready(function() {
 
   <div class="portfolio VRAR MAIN" data-cat="VRAR">
     <div class="portfolio-wrapper">
-      <a href="/portfolio/spacehack"><img src="images/portfolio/magixhome.gif" alt="" /></a> 
+      <a href="/portfolio/magixhome"><img src="images/portfolio/magixhome.gif" alt="" /></a> 
       <div class="label">
         <div class="label-text">
           <a class="text-title">MagixHome Mobile VR</a> 
@@ -192,7 +192,7 @@ $(document).ready(function() {
         <div class="label-text2">
           <a class="text-title">Co-Founder, Creative Director</a>
         </div>
-      <a href="/under-construction"><img src="images/portfolio/fulcrum1.jpg" alt="" /></a> 
+      <a href="/portfolio/fulcrumsleeve"><img src="images/portfolio/fulcrum1.jpg" alt="" /></a> 
       <div class="label">
         <div class="label-text">
           <a class="text-title">Fulcrum Sleeve (Reboot Lab)</a> 
@@ -354,7 +354,7 @@ $(document).ready(function() {
         <div class="label-text2">
           <a class="text-title">Co-Founder, Creative Director</a>
         </div>
-      <a href="/under-construction"><img src="images/portfolio/fulcrum1.jpg" alt="" /></a> 
+      <a href="/portfolio/fulcrumsleeve"><img src="images/portfolio/fulcrum1.jpg" alt="" /></a> 
       <div class="label">
         <div class="label-text">
           <a class="text-title">Reboot Lab</a> 
