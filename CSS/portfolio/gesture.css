@@ -21,6 +21,11 @@ a.back-to-portfolio {
 	-moz-border-radius: 30px;
 	border-radius: 30px;
 }	
+
+a.back-to-portfolio:hover {
+	opacity: 0.5;
+}
+
 div.wrapper {
 	 margin: 0 auto;
 	 display: block;

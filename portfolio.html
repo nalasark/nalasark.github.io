@@ -30,9 +30,16 @@
 
  <script>
      $(function () {
-        
+ 
+      var hashedValue = window.location.hash;
+      if (hashedValue.replace('#', '') == '') {
+          hashedValue = '.VRAR';            //  Use the default filter if there's no hash value
+      } else {
+          hashedValue = '.' + hashedValue.replace('#', '');      //  Try to figure out the filter class based on the hash value
+      }
+
       var filterList = {
-      
+
         init: function () {
         
           // MixItUp plugin
@@ -43,7 +50,7 @@
               filter: '.filter' 
             },
             load: {
-              filter: '.VRAR' // show app tab on first load
+              filter: hashedValue // show app tab on first load
             }     
           });               
         
@@ -64,6 +71,13 @@ $(function () {
         $('#portfoliolist .portfolio').removeClass('.change');
       }
     })
+
+$(document).ready(function() {
+   $("#filters span").click(function(e) {
+     window.location.hash = $(this).attr("id");
+     e.preventDefault();
+   });
+});
   </script>
 
 </head>
@@ -78,20 +92,21 @@ $(function () {
     </div>
   </nav>
 
-  <div class="main">
+<div class="main">
 
 <ul id="filters" class="clearfix">
-<li><span class="filter VRAR active" data-filter=".VRAR">VR/AR</span></li>
-<li><span class="filter CREATIVE" data-filter=".CREATIVE">Creative Technology</span></li>
-<li><span class="filter DESIGN" data-filter=".DESIGN">Design & UI UX</span></li>
-<li><span class="filter ENTRE" data-filter=".ENTRE">Entreprenuership, Clubs & Events</span></li>
-<li><span class="filter FILM" data-filter=".FILM">Film</span></li>
+<!-- <li><span class="filter MAIN active" data-filter=".MAIN" id="MAIN">Favourite</span></li> !-->
+<li><span class="filter VRAR active" data-filter=".VRAR" id="VRAR">VR/AR</span></li>
+<li><span class="filter CREATIVE" data-filter=".CREATIVE" id="CREATIVE">Creative Technology</span></li>
+<li><span class="filter DESIGN" data-filter=".DESIGN" id="DESIGN">Design & UI UX</span></li>
+<li><span class="filter ENTRE" data-filter=".ENTRE" id = "ENTRE">Entreprenuership, Clubs & Events</span></li>
+<li><span class="filter FILM" data-filter=".FILM" id="FILM">Film</span></li>
 </ul>
 
 <div id="portfoliolist">
 
 <!-- start VR/AR !-->
-  <div class="portfolio VRAR" data-cat="VRAR">
+  <div class="portfolio VRAR MAIN" data-cat="VRAR">
     <div class="portfolio-wrapper">
       <div class="label-text2">
         <a class="text-title">4th Place</a>
@@ -133,7 +148,7 @@ $(function () {
     </div>
   </div>
 
-  <div class="portfolio VRAR" data-cat="VRAR">
+  <div class="portfolio VRAR MAIN" data-cat="VRAR">
     <div class="portfolio-wrapper">
       <a href="/portfolio/spacehack"><img src="images/portfolio/magixhome.gif" alt="" /></a> 
       <div class="label">
@@ -145,7 +160,7 @@ $(function () {
     </div>
   </div>
 
-  <div class="portfolio VRAR" data-cat="VRAR">
+  <div class="portfolio VRAR MAIN" data-cat="VRAR">
     <div class="portfolio-wrapper">
       <a href="/portfolio/gesture"> <img src="images/portfolio/gesture.gif" alt="" /> </a>
       <div class="label">
@@ -202,7 +217,7 @@ $(function () {
     </div>
   </div>
 
-  <div class="portfolio CREATIVE" data-cat="CREATIVE">
+  <div class="portfolio CREATIVE MAIN" data-cat="CREATIVE">
     <div class="portfolio-wrapper">
       <div class="label-text2">
           <a class="text-title">1st Place</a>
@@ -349,7 +364,7 @@ $(function () {
     </div>
   </div>
 
-  <div class="portfolio ENTRE" data-cat="ENTRE">
+  <div class="portfolio ENTRE MAIN" data-cat="ENTRE">
     <div class="portfolio-wrapper">
         <div class="label-text2">
           <a class="text-title">Co-Founder, Creative Director</a>

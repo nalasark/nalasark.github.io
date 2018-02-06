@@ -35,12 +35,21 @@
             })();
         </script>
 
-
+<script>
+function goBack() {
+    var prev = document.referrer;
+    if (prev.indexOf("nalasark.com/portfolio")!= 1) {
+        window.location = '../portfolio';
+    }  else {
+        window.history.back();
+    }
+}
+</script>
 
     </head>
 
 <body>
-<a href="/portfolio" class="back-to-portfolio">Back to Portfolio</a>
+<a onclick="goBack()" class="back-to-portfolio" title="Portfolio">Back to Portfolio</a>
   <nav class="navbar">
     <div class="inner">
       <a href="http://linkedIn.com/in/ngyijunalan"><img border="0" alt="LinkedIn" src="../images/linkedin.png" width="30" height="30"></a> 

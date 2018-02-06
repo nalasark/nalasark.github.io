@@ -38,12 +38,21 @@
             })();
         </script>
 
-
+<script>
+function goBack() {
+    var prev = document.referrer;
+    if (prev.indexOf("nalasark.com/portfolio")!= 1) {
+        window.location = '../portfolio';
+    }  else {
+        window.history.back();
+    }
+}
+</script>
 
     </head>
 
 <body>
-<a href="/portfolio" class="back-to-portfolio">Back to Portfolio</a>
+<a onclick="goBack()" class="back-to-portfolio" title="Portfolio">Back to Portfolio</a>
   <nav class="navbar">
     <div class="inner">
       <a href="http://linkedIn.com/in/ngyijunalan"><img border="0" alt="LinkedIn" src="../images/linkedin.png" width="30" height="30"></a> 
@@ -54,7 +63,7 @@
     <div>
       <article>
         <h1>Gesture interaction </h1>
-        <h1>R&amp;D Internship</h1>
+        <h1>R&amp;D UXInternship</h1>
         <p class="author">Digital Planning Lab, URBAN REDEVELOPMENT AUTHORITY</p>
         <p><style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='http://www.youtube.com/embed/SppCRg92-dg' frameborder='0' allowfullscreen></iframe></div></p>
         <p class="intro">Research &amp; development of 2 vastly different gesture interaction technologies onto the in house map data planner.</p>
