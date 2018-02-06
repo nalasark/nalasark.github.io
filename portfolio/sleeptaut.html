@@ -39,7 +39,7 @@
 function goBack() {
     var prev = document.referrer;
     console.log(prev);
-    if (prev.indexOf("nalasark.com/portfolio")!= 1) {
+    if (prev.indexOf("nalasark.com/portfolio")!== -1) {
         window.location = '../portfolio';
     }  else {
         window.history.back();
