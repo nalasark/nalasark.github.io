@@ -43,7 +43,7 @@
  
       var hashedValue = window.location.hash;
       if (hashedValue.replace('#', '') == '') {
-          hashedValue = '.VRAR';            //  Use the default filter if there's no hash value
+          hashedValue = '.MAIN';            //  Use the default filter if there's no hash value
       } else {
           hashedValue = '.' + hashedValue.replace('#', '');      //  Try to figure out the filter class based on the hash value
       }
@@ -106,7 +106,8 @@ $(function() {
 
 <ul id="filters" class="clearfix">
 <!-- <li><span class="filter MAIN active" data-filter=".MAIN" id="MAIN">Favourite</span></li> !-->
-<li><span class="filter VRAR active" data-filter=".VRAR" id="VRAR">VR/AR</span></li>
+<li><span class="filter selected MAIN" data-filter=".MAIN" id="MAIN">Favourites</span></li>
+<li><span class="filter VRAR" data-filter=".VRAR" id="VRAR">VR/AR</span></li>
 <li><span class="filter CREATIVE" data-filter=".CREATIVE" id="CREATIVE">Creative Technology</span></li>
 <li><span class="filter DESIGN" data-filter=".DESIGN" id="DESIGN">Design & UI UX</span></li>
 <li><span class="filter ENTRE" data-filter=".ENTRE" id = "ENTRE">Entreprenuership, Clubs & Events</span></li>
