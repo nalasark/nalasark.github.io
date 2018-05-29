@@ -98,6 +98,35 @@ p.pullquote {
 	 margin: 0px 0px 1.421em 0px;
 }
 
+p.title {
+	 padding-left: 10px;
+	 text-align: left;
+	 color: rgba(51, 51, 51, 1.00);
+	 font-size: 1em;
+	 font-weight: bold;
+	 margin: 0px 0px 1.2em 0px;
+}
+
+p.normal {
+	 padding-left: 10px;
+	 text-align: left;
+	 color: rgba(51, 51, 51, 1.00);
+	 font-size: 1em;
+	 line-height: 1.421em;
+	 margin: 0px 0px 1.421em 0px;
+}
+
+p.left {
+	 text-align: left;
+}
+p.right {
+	 text-align: right;
+}
+p.center {
+	 text-align: center;
+}
+
+
 p.author {
 	 text-align: center;
 	 font-size: 13px;
