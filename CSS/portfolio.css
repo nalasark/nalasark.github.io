@@ -151,8 +151,11 @@ a.back-to-home:hover {
 	.COMP .portfolio-wrapper{
 		background: rgba(237,126,118,0.85);
 	}
-	.FILM .portfolio-wrapper{
+	/*.FILM .portfolio-wrapper{
 		background: rgba(5,168,170,0.85);
+	}*/
+	.FILM .portfolio-wrapper{
+		background: rgba(251,174,92,0.85);
 	}
 
 	.VRAR .label-bg{
@@ -170,8 +173,11 @@ a.back-to-home:hover {
 	.COMP .label-bg{
 		background: rgba(237,126,118,0.85);
 	}
-	.FILM .label-bg{
+	/*.FILM .label-bg{
 		background: rgba(5,168,170,0.85);
+	}*/
+	.FILM .label-bg{
+		background: rgba(251,174,92,0.85);
 	}
 
 	#filters .VRAR:hover {
@@ -199,8 +205,13 @@ a.back-to-home:hover {
 		color:#fff;
 		transition: background .2s ease-in;
 	}
-	#filters .FILM:hover {
+	/*#filters .FILM:hover {
 		background: rgba(5,168,170,1);
+		color:#fff;
+		transition: background .2s ease-in;
+	}*/
+	#filters .FILM:hover {
+		background: rgba(251,174,92,1);
 		color:#fff;
 		transition: background .2s ease-in;
 	}
@@ -225,8 +236,12 @@ a.back-to-home:hover {
 		background: rgba(237,126,118,1);
 		color:#fff;
 	}
-	#filters .FILM.active {
+	/*#filters .FILM.active {
 		background: rgba(5,168,170,1);
+		color:#fff;
+	}*/
+	#filters .FILM.active {
+		background: rgba(251,174,92,1);
 		color:#fff;
 	}
 
@@ -251,9 +266,12 @@ a.back-to-home:hover {
 	}
 	#filters .COMP{
 		border-right: 1px solid rgba(237,126,118,1);
-	}
+	}/*
 	#filters .FILM{
 		border-right: 1px solid rgba(5,168,170,1);
+	}*/
+	#filters .FILM{
+		border-right: 1px solid rgba(251,174,92,1);
 	}
 
   .main {
