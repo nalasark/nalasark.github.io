@@ -76,87 +76,82 @@ a.back-to-home:hover {
 	display:none;
 	float:left;
 	overflow:hidden;
+
+	position: relative !important;
+	background: white;
+	cursor:pointer;
 }
 
-	.portfolio-wrapper {
-		overflow:hidden;
-		position: relative !important;
-		background: white;
-		cursor:pointer;
-	}
-
-	.portfolio img {
-		max-width:100%;
-		position: relative;
-		top:0px;
-		opacity: 1;
+.portfolio img {
+	max-width:100%;
+	position: relative;
+	top:0px;
+	opacity: 1;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
-	}
+}
 	
-	.portfolio img:hover {
-		opacity: .7;
-	}
+.portfolio img:hover {
+	opacity: .7;
+}
 
-	.portfolio .label {
-		position: absolute;
-		width: 100%;
-		height:30px;
-		bottom:0px;
-	}
+.portfolio .label {
+	position: absolute;
+	width: 100%;
+	height:30px;
+	bottom:0px;
+}
 
-		.portfolio .label-bg {
-			background: rgba(137,137,137,0.85);
-			width: 100%;
-			height:100%;
-			position: absolute;
-			top:0;
-			left:0;
-		}
-	
-		.portfolio .label-text {
-			color:#fff;
-			position: relative;
-			z-index:500;
-			padding:5px 9px;
-			font-size:14px;
-		}
+.portfolio .label-bg {
+	color:#fff;
+	position: relative;
+	z-index:500;
+	padding:5px 9px;
+	font-size:14px;
 
-	.portfolio .label-text2 {
-		z-index:555;
-		position: absolute;
-		width: 100%;
-		height: 25px;
-		padding: 5px 12px 0px 12px;
-		background: rgba(137,137,137,0.8);
-		font-size:15px;
-		font-style:italic;
-		color:white;
-		top:0px;
-		left: 0px;
-	}
+	background: rgba(137,137,137,0.85);
+	width: 100%;
+	height:100%;
+	position: absolute;
+	top:0;
+	left:0;
+}
 
-	.VRAR .portfolio-wrapper {
-		background: rgba(69,140,204,0.85);
-	}
-	.CREATIVE .portfolio-wrapper{
-		background: rgba(96,92,168,0.85);
-	}
-	.DESIGN .portfolio-wrapper{
-		background: rgba(244,152,157,0.85);
-	}
-	.ENTRE .portfolio-wrapper{
-		background: rgba(251,174,92,0.85);
-	}
-	.COMP .portfolio-wrapper{
-		background: rgba(237,126,118,0.85);
-	}
-	/*.FILM .portfolio-wrapper{
-		background: rgba(5,168,170,0.85);
-	}*/
-	.FILM .portfolio-wrapper{
-		background: rgba(251,174,92,0.85);
-	}
+.portfolio .label-text2 {
+	z-index:555;
+	position: absolute;
+	width: 100%;
+	height: 25px;
+	padding: 5px 12px 0px 12px;
+	background: rgba(137,137,137,0.8);
+	font-size:15px;
+	font-style:italic;
+	color:white;
+	top:0px;
+	left: 0px;
+}
+
+.VRAR .portfolio-wrapper {
+	background: rgba(69,140,204,0.85);
+}
+.CREATIVE .portfolio-wrapper{
+	background: rgba(96,92,168,0.85);
+}
+.DESIGN .portfolio-wrapper{
+	background: rgba(244,152,157,0.85);
+}
+.ENTRE .portfolio-wrapper{
+	background: rgba(251,174,92,0.85);
+}
+.COMP .portfolio-wrapper{
+	background: rgba(237,126,118,0.85);
+}
+/*.FILM .portfolio-wrapper{
+	background: rgba(5,168,170,0.85);
+}*/
+.FILM .portfolio-wrapper{
+	background: rgba(251,174,92,0.85);
+}
 
 	.VRAR .label-bg{
 		background: rgba(69,140,204,0.85);
