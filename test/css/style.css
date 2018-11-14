@@ -1,0 +1,514 @@
+/* Variables */
+/* Panoview */
+* {
+  box-sizing: border-box;
+}
+
+/* Success initialization of Paver */
+.paver--initialized {
+  position: relative;
+}
+
+.paver--ready {
+  overflow: hidden;
+}
+.paver--ready div.paver__pano {
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.paver--ready div.paver__scroller {
+  border-radius: 2px;
+  height: 4px;
+  opacity: 0;
+  position: absolute;
+  bottom: 16px;
+  left: 32px;
+  right: 32px;
+  z-index: 2;
+  transition: opacity 0.25s ease-in-out;
+}
+.paver--ready div.paver__scroller span {
+  border-radius: 2px;
+  display: block;
+  width: 12.5%;
+  height: 4px;
+}
+.paver--ready.paver--on:hover div.paver__scroller, .paver--ready.paver--tilting div.paver__scroller {
+  opacity: 1;
+}
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+  .paver--ready {
+    /* Disable scroller appearing when "hovered" on in mobile devies */
+  }
+  .paver--ready.paver--metaActive div.paver__meta {
+    opacity: 0;
+  }
+  .paver--ready.paver--on:hover div.paver__scroller {
+    opacity: 0;
+  }
+}
+/*---------- DEMO CSS ----------*/
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: 'Karla', sans-serif;
+  background-color: white;
+  color: #444;
+}
+
+body {
+  margin: 0 auto;
+  line-height: 1.45;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/*-- NAV -- */
+nav {
+  display: none;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+nav li a {
+  color: #000;
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+nav li a:hover,
+.menu__checkbox:hover
+ {
+  background-color: #f4f4f4;
+}
+
+/* menu */
+.menu {
+  display: none;
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+.title {
+  text-decoration: none;
+  color: #444;
+  font-family: "arapey", serif;
+  font-style: normal;
+  font-weight: 400;
+  display: block;
+  top: 18px;
+  left: 20px;
+  position: absolute;
+  float: left;
+  z-index: 6;
+}
+@media (min-width: 48em) {
+  .title {
+    display: none;
+  }
+}
+
+.menu__icon {
+  cursor: pointer;
+  display: block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.hamburger {
+  background: #333;
+  display: block;
+  height: 3px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 30px;
+  text-align: left;
+}
+
+.hamburger:before,
+.hamburger:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .5s ease-out;
+  width: 100%;
+}
+
+.hamburger:before {
+  top: 8px;
+}
+
+.hamburger:after {
+  top: -8px;
+}
+
+/* menu checkbox */
+.menu__checkbox {
+  opacity: 0;
+}
+
+.menu__checkbox:checked ~ .menu {
+  max-height: 240px;
+  display: block;
+}
+
+.menu__checkbox:focus ~ .menu__icon {
+  outline: #5E9ED6 1px solid;
+  background-color: #f4f4f4;
+}
+
+.menu__checkbox:checked ~ .menu__icon {
+  background-color: #f4f4f4;
+}
+
+.menu__checkbox:checked ~ .menu__icon .hamburger {
+  background: transparent;
+}
+
+.menu__checkbox:checked ~ .menu__icon .hamburger:before {
+  -webkit-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+}
+
+.menu__checkbox:checked ~ .menu__icon .hamburger:after {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.menu__checkbox:checked ~ .menu__icon:not(.steps) .hamburger:before,
+.menu__checkbox:checked ~ .menu__icon:not(.steps) .hamburger:after {
+  top: 0;
+}
+
+.active {
+  background-color: #f4f4f4;
+}
+
+nav .hide {
+  display: none;
+}
+
+/* 48em = 768px */
+@media (min-width: 48em) {
+  nav li {
+    float: left;
+  }
+
+  nav li a {
+    padding: 15px 20px;
+  }
+
+  nav .hide {
+    display: inline;
+  }
+
+  nav li .hideA {
+    font-size: 16px;
+    font-family: "Arapey", serif;
+    font-weight: 400;
+    padding: 14.5px 20px;
+  }
+
+  .menu {
+    display: block;
+    clear: none;
+    max-height: none;
+    padding-left: 8.8vw;
+  }
+
+  .menu__icon,
+  .menu__checkbox,
+  .hamburger {
+    display: none;
+  }
+}
+/*---------- INTRO --------- */
+.intro {
+  height: 80%;
+  color: white;
+  background-image: url("http://nalasark.com/images/portfolio/wide.jpg");
+  margin-bottom: 100px;
+}
+
+.main {
+  z-index: 2;
+  position: absolute;
+  margin: 0 0 0 10vw;
+  padding-top: 11rem;
+  font-size: 3.3em;
+  font-family: 'oregano';
+}
+
+.name {
+  color: #864de8;
+}
+
+.ARVR {
+  color: #a67fe9;
+}
+
+.sub {
+  z-index: 2;
+  padding-top: 16rem;
+  position: absolute;
+  font-family: 'Arapey', sans-serif;
+  font-weight: normal;
+  margin: 0 0 0 10vw;
+}
+
+.panorama {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.panorama img {
+  height: 100%;
+}
+
+.sub2 {
+  display: none;
+  z-index: 2;
+  padding-top: 18rem;
+  position: absolute;
+  font-family: 'Arapey', sans-serif;
+  font-weight: normal;
+  margin: 5px 0 0 10vw;
+}
+
+@media screen and (max-width: 22em) {
+  .intro {
+    height: 410px;
+  }
+
+  .main {
+    font-size: 2.8em;
+  }
+
+  .sub {
+    font-size: 1.1em;
+  }
+
+  .sub2 {
+    font-size: 1em;
+  }
+}
+/*---------- CARDS LAYOUT ----------*/
+#work {
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.arrow-up {
+  position: absolute;
+  z-index: 2;
+  width: 0;
+  height: 0;
+  margin: -20px 0 0 34px;
+  border-left: 14.4px solid transparent;
+  border-right: 14.4px solid transparent;
+  border-bottom: 16px solid white;
+}
+
+.arrow-up-highlight {
+  position: absolute;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  margin: -14px 0 0 35.6px;
+  border-left: 12.6px solid transparent;
+  border-right: 12.6px solid transparent;
+  border-bottom: 14px solid white;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card_content {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  margin-top: 0;
+  padding: 1em 1em 0.6em 1em;
+}
+.card_content h1, .card_content h2, .card_content h3, .card_content h4, .card_content h5, .card_content h6 {
+  line-height: 1.1;
+  margin-top: 0.6em;
+}
+.card_content p {
+  flex: 1 0 auto;
+  font-size: 0.875em;
+  margin: 0;
+  padding: 0.5em 0 2em 0;
+}
+
+.card_image {
+  max-width: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  border-bottom: 4px solid white;
+}
+
+.card_link {
+  color: #444;
+  text-decoration: none;
+}
+.card_link p {
+  color: gray;
+}
+.card_link:hover, .card_link:focus, .card_link:active {
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-timing-function: ease-in-out;
+  color: #00B2FF;
+}
+.card_link:hover p, .card_link:focus p, .card_link:active p {
+  color: #00B2FF;
+}
+.card_link:hover .arrow-up, .card_link:hover .card_image, .card_link:focus .arrow-up, .card_link:focus .card_image, .card_link:active .arrow-up, .card_link:active .card_image {
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-timing-function: ease-in-out;
+}
+.card_link:hover .arrow-up, .card_link:focus .arrow-up, .card_link:active .arrow-up {
+  margin: -20px 0 0 30px;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-bottom: 20px solid #00B2FF;
+}
+.card_link:hover .card_image, .card_link:focus .card_image, .card_link:active .card_image {
+  border-bottom: 4px solid #00B2FF;
+}
+
+.cards_item {
+  display: flex;
+  margin-top: 0;
+  background-color: white;
+}
+.no-flexbox .cards_item {
+  float: left;
+}
+@media screen and (max-width: 30em) {
+  .cards_item {
+    width: 200%;
+  }
+  .no-flexbox .cards_item:nth-child(1n+1) {
+    clear: both;
+  }
+  .cards_item .card_heading {
+    font-size: 5vw;
+  }
+  .cards_item p {
+    font-size: 3.3vw;
+  }
+}
+@media screen and (min-width: 30em) and (max-width: 50em) {
+  .cards_item {
+    width: 50%;
+  }
+  .no-flexbox .cards_item:nth-child(2n+1) {
+    clear: both;
+  }
+}
+@media screen and (min-width: 50em) {
+  .cards_item {
+    width: 33.3333%;
+  }
+  .no-flexbox .cards_item:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+.about {
+  font-family: 'lato', sans-serif;
+  color: black;
+  display: flex;
+  padding-right: 30px;
+  margin-top: 50px;
+  max-width: 1450px;
+  background-image: url(http://nalasark.com/images/cover_myself_faded.jpg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+}
+
+.about h3 {
+  font-weight: normal;
+  padding: 15px;
+  margin-left: 22vw;
+  margin-right: 22vw;
+  z-index: 3;
+  font-size: 18px;
+  text-align: justify;
+}
+.about h3 .connect {
+  text-justify: none;
+  text-align: left;
+}
+@media screen and (max-width: 50em) {
+  .about h3 {
+    margin-left: 6vw;
+    margin-right: 3vw;
+  }
+}
+
+.about .about-start {
+  color: #864de8;
+}
+
+.about a {
+  text-decoration: none;
+  color: #864de8;
+}
+
+#footer {
+  text-align: center;
+  background-color: black;
+}
+#footer .fa {
+  margin: 5px;
+}

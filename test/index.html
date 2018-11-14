@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Cards Layout + Fallback</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <link href="https://fonts.googleapis.com/css?family=Karla|Lato|Oregano|Arapey" rel="stylesheet">
+
+<nav class="navbar">
+  <input class="menu__checkbox" type="checkbox" id="menu">
+  <a href="#intro" class="title">Nala's Ark</a>
+  <label class="menu__icon" for="menu"><span class="hamburger">
+  </span></label>
+  <ul id="nav-scroll" class="menu" role="menuitem">
+    <li class="hide active"><a class="hideA" href="#intro"> Nala's Ark </a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</nav>
+
+<div id="intro" class="intro">
+  <div id="scene">  
+    <div class="layer" data-depth="0.1">
+  <h1 class="main"> I am <span class="name">Alan Ng</span> </h1>
+  <h2 class="sub"> I am an <span class="ARVR">immersive</span> storyteller and <span class="ARVR">multimedium</span> designer. </h2>
+  <h3 class="sub2"> I also like to make films and products. </h3>
+  </div> </div>
+  <div class="panorama">
+    <img src="http://nalasark.com/images/portfolio/wide.jpg"/>
+  </div>
+</div>
+
+<div id="work">
+<ul class="cards">
+  
+  <li class="cards_item"><div class="card"><a class="card_link" href="#">
+      <div class="card_image"> 
+        <img src="http://nalasark.com/images/portfolio/custoar.jpg"/>
+			</div>
+      <div class="arrow-up"></div><div class="arrow-up-highlight"></div>
+      <div class="card_content">
+				<h3 class="card_heading">CUSTO AR, Capstone</h3>
+				<p>Custom generative shelving app in Augmented Reality.</p>
+      </div>
+  </a></div></li>
+ 
+   	<li class="cards_item">
+		<div class="card"> <a class="card_link" href="#">
+      <div class="card_image">				        
+        <img src="http://nalasark.com/images/portfolio/arpen2.jpg" />
+			</div>
+      <div class="arrow-up"></div><div class="arrow-up-highlight"></div>
+      <div class="card_content">
+				<h3 class="card_heading">AR Wand, SUTD WTHack 1st Place</h3>
+				<p>Physical spatial input for prototyping in mobile AR.</p>
+      </div>
+  </a></div></li>
+
+  <li class="cards_item"><div class="card"><a class="card_link" href="#">
+      <div class="card_image"> 
+        <img src="http://nalasark.com/images/portfolio/custoar.jpg"/>
+			</div>
+      <div class="arrow-up"></div><div class="arrow-up-highlight"></div>
+      <div class="card_content">
+				<h3 class="card_heading">CUSTO AR, Capstone</h3>
+				<p>Custom generative shelving app in Augmented Reality.</p>
+      </div>
+  </a></div></li>
+ 
+   	<li class="cards_item">
+		<div class="card"> <a class="card_link" href="#">
+      <div class="card_image">				        
+        <img src="http://nalasark.com/images/portfolio/arpen2.jpg" />
+			</div>
+      <div class="arrow-up"></div><div class="arrow-up-highlight"></div>
+      <div class="card_content">
+				<h3 class="card_heading">AR Wand, SUTD WTHack 1st Place</h3>
+				<p>Physical spatial input for prototyping in mobile AR.</p>
+      </div>
+  </a></div></li>
+  
+    <li class="cards_item"><div class="card"><a class="card_link" href="#">
+      <div class="card_image"> 
+        <img src="http://nalasark.com/images/portfolio/custoar.jpg"/>
+			</div>
+      <div class="arrow-up"></div><div class="arrow-up-highlight"></div>
+      <div class="card_content">
+				<h3 class="card_heading">CUSTO AR, Capstone</h3>
+				<p>Custom generative shelving app in Augmented Reality.</p>
+      </div>
+  </a></div></li>
+ 
+   	<li class="cards_item">
+		<div class="card"> <a class="card_link" href="#">
+      <div class="card_image">				        
+        <img src="http://nalasark.com/images/portfolio/arpen2.jpg" />
+			</div>
+      <div class="arrow-up"></div><div class="arrow-up-highlight"></div>
+      <div class="card_content">
+				<h3 class="card_heading">AR Wand, SUTD WTHack 1st Place</h3>
+				<p>Physical spatial input for prototyping in mobile AR.</p>
+      </div>
+  </a></div></li>
+
+  </ul></div>
+
+<div id="about" class="about" >
+  <h3> <span class="about-start">Hey! </span> I'm Alan, a designer who finds passion in the unification of technology, design and storytelling. I find the daunting exciting, the possibilities euphoric, and the wicked worth solving. <br><br>
+I have designed for immersive spatial interaction for several years, working with both start-ups and companies like MeshMinds, Sky Opts and URA. Currently, I am an AR game developer in SUTD Game Lab, and am leading the SUTD Immersive Realities Lab to drive adoption in academia.<br><br>
+    I'm a dreamer and a doer. <b>Have an idea? Let's make it happen.</b><br>
+    <span class="connect">Connect with me on <a class="linkedin" href="linkedin.com/in/ngyijunalan">LinkedIn</a> & reach me at <a class="email" href="mailto:nalasark@gmail.com">nalasark@gmail.com</a></span>
+    <br><br><br>
+ </h3>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div id="footer">
+  <i class="fa fa-linkedin-square" style="font-size:24px;color:white"></i>
+  <i class="fa fa-envelope-square" style="font-size:24px;color:white"></i>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/parallax/1.1.1/parallax.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
