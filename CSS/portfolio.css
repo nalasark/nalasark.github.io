@@ -340,14 +340,18 @@ a.back-to-home:hover {
 		width:45%;
 		margin:1%;
 	}		
-}
-
-@media only screen and (max-width: 520px){
-	
-	#filters {
+		#filters {
 		font-size: 11px;
 	}
 	.text-title {
 		font-size: 11px;
 	}		
+}
+
+@media only screen and (max-width: 400px){
+	#portfoliolist .portfolio {
+		width:100%;
+		margin:1%;
+	}			
+
 }
