@@ -16,6 +16,7 @@ a.back-to-portfolio {
 	top: 20px;
 	background: url("../../images/arrow.png") no-repeat center 43%;
 	background-size: 40px 40px;
+	background-attachment: scroll;
 	opacity: .8;
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;

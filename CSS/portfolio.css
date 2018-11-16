@@ -6,6 +6,183 @@ body {
 html {
   overflow-y: scroll;
 }
+
+/*-- NAV -- */
+.header {
+	font-family: 'Montserrat', serif;
+    /*display: none;*/
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 998;
+    top: 0;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.header li a {
+    color: #000;
+    display: block;
+    /*border-right: 1px solid #f4f4f4;*/
+    padding: 20px 20px;
+    text-decoration: none;
+    /*text-transform: uppercase;*/
+    /*font-weight: bold;*/
+    font-size: 15px;
+}
+
+.header li a:hover,
+/*nav li a:focus,*/
+.menu__checkbox:hover
+/*.menu__checkbox:focus,*/
+/* :focus */
+{
+    background-color: #f4f4f4;
+}
+
+/* menu */
+.menu {
+    display: none;
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+.title {
+    text-decoration: none;
+    color: #444;
+    font-family: "arapey", serif;
+    font-style: normal;
+    font-weight: 400;
+    display: block;
+    top: 18px;
+    left: 20px;
+    position: absolute;
+    float: left;
+    z-index: 999;
+  @media (min-width: 48em) {
+    display: none;
+  }
+}
+.menu__icon {
+    cursor: pointer;
+    display: block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.hamburger {
+    background: #333;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 30px;
+  text-align: left;
+}
+
+.hamburger:before,
+.hamburger:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .5s ease-out;
+    width: 100%;
+}
+
+.hamburger:before {
+    top: 8px;
+}
+
+.hamburger:after {
+    top: -8px;
+}
+
+/* menu checkbox */
+.menu__checkbox {
+    opacity: 0;
+}
+
+.menu__checkbox:checked~.menu {
+    max-height: 240px;
+    display: block;
+}
+
+.menu__checkbox:focus~.menu__icon {
+    outline: #5E9ED6 1px solid;
+    background-color: #f4f4f4;
+}
+
+.menu__checkbox:checked~.menu__icon {
+    background-color: #f4f4f4;
+}
+
+.menu__checkbox:checked~.menu__icon .hamburger {
+    background: transparent;
+}
+
+.menu__checkbox:checked~.menu__icon .hamburger:before {
+    transform: rotate(-225deg);
+}
+
+.menu__checkbox:checked~.menu__icon .hamburger:after {
+    transform: rotate(225deg);
+}
+
+.menu__checkbox:checked~.menu__icon:not(.steps) .hamburger:before,
+.menu__checkbox:checked~.menu__icon:not(.steps) .hamburger:after {
+    top: 0;
+}
+.active {
+  background-color: #f4f4f4;
+}
+
+/* 48em = 768px */
+@media (min-width: 48em) {
+	.header .title {display:none;}
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 15px 20px;
+    }
+    .header .hide {
+      display: inline;
+    }
+    .header li .hideA {
+      font-size:16px;
+      font-family: "Arapey", serif;
+      font-weight: 400;
+      padding: 14.5px 20px;
+    }
+    .menu {
+        display: block;
+        clear: none;
+        max-height: none;
+        padding-left: 8.8vw;
+    }
+    .menu__icon,
+    .menu__checkbox,
+    .hamburger {
+        display: none;
+    }
+}
+
+.header-break{
+	padding-top:30px;
+}
+
 a.back-to-home {
 	width: 40px;
 	height: 40px;
@@ -348,9 +525,9 @@ a.back-to-home:hover {
 	}		
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 430px){
 	#portfoliolist .portfolio {
-		width:100%;
+		width:90%;
 		margin:1%;
 	}			
 

@@ -3,7 +3,7 @@
  */
 
 html, body, .container {
-  height: 100%;
+
 }
 
 /* Reset */
@@ -81,9 +81,8 @@ p {
 .button {
   margin:5px;
   margin-top: 3vh;
-  font-size: 18px;
+  font-size: 20px;
   font-family: 'arapey';
-  font-style:italic;
   display: inline-block;
   padding: 8px 14px;
   color: black;
@@ -100,7 +99,7 @@ p {
 .about {
   border: 1px solid #ffd3b5;
   background: #ffd3b5;
-  border-bottom: 2px solid #fcc771;  
+  border-bottom: 2px solid #ff9c58;  
 }
 
 .hvr-sweep-to-top {
@@ -136,7 +135,7 @@ p {
   transition-timing-function: ease-out;
 }
 .about.hvr-sweep-to-top:before{
-  background: #fcc771;
+  background: #ff9c58;
 }
 
 .hvr-sweep-to-top:hover, .hvr-sweep-to-top:focus, .hvr-sweep-to-top:active {
@@ -160,7 +159,7 @@ p {
   }
 
   .button {
-    font-size:25px;
+    font-size:20px;
   }
 }
 
@@ -178,7 +177,7 @@ p {
   }
 
   .button {
-    font-size:20px;
+    font-size:15px;
   }
 }
 
@@ -193,7 +192,7 @@ p {
   }
 
   .button {
-font-size:20px;
+  font-size:15px;
   }
 }
 

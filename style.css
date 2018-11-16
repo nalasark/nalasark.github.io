@@ -1,23 +1,26 @@
 body {
   /* Location of the image */
-  background-image: url(images/background.jpg);
+  /*background-image: url(images/background.jpg);*/
+  background-image: url(images/bg-me.png), url(images/bg-tmw.jpg);
+  background-position: 10% bottom, bottom right;
+  background-repeat: no-repeat;
   
   /* Image is centered vertically and horizontally at all times */
-  background-position: top center;
+  /*background-position: top center;*/
   
   /* Image doesn't repeat */
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
   
   /* Makes the image fixed in the viewport so that it doesn't move when 
      the content height is greater than the image height */
-  background-attachment: scroll;
+  background-attachment: fixed;
   
   /* This is what makes the background image rescale based on its container's size */
-  background-size: cover;
+  background-size: 250px,cover;
   
   /* Pick a solid background color that will be displayed while the background image is loading */
   background-color: #eff0f6;
-  
+
   /* SHORTHAND CSS NOTATION
    * background: url(background-photo.jpg) center center cover no-repeat fixed;
    */
@@ -25,11 +28,33 @@ body {
 }
 
 /* For mobile devices */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1200px) {
   body {
+    background-size: 150px,cover;
+    background-position: 10% bottom, 80% bottom;
     /* The file size of this background image is 93% smaller
-     * to improve page load speed on mobile internet connections */
+     * to improve page load speed on mobile internet connections 
     background-image: url(images/background.jpg);
-    background-size: cover;
+    background-size: cover;*/
   }
-	}
+}
+@media only screen and (max-width: 800px) {
+  body {
+    background-size: 120px,cover;
+    background-position: 10% bottom, 70% bottom;
+    /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections 
+    background-image: url(images/background.jpg);
+    background-size: cover;*/
+  }
+}
+@media only screen and (max-width: 500px) {
+  body {
+    background-size: 100px,cover;
+    background-position: 2% bottom, 70% bottom;
+    /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections 
+    background-image: url(images/background.jpg);
+    background-size: cover;*/
+  }
+}
