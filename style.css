@@ -1,4 +1,4 @@
-body {
+html {
   /* Location of the image */
   /*background-image: url(images/background.jpg);*/
   background-image: url(images/bg-me.png), url(images/bg-tmw.jpg);
@@ -29,9 +29,10 @@ body {
 
 /* For mobile devices */
 @media only screen and (max-width: 1200px) {
-  body {
+  html {
     background-size: 150px,cover;
     background-position: 10% bottom, 80% bottom;
+    height:100%;
     /* The file size of this background image is 93% smaller
      * to improve page load speed on mobile internet connections 
     background-image: url(images/background.jpg);
@@ -39,7 +40,7 @@ body {
   }
 }
 @media only screen and (max-width: 800px) {
-  body {
+  html {
     background-size: 120px,cover;
     background-position: 10% bottom, 70% bottom;
     /* The file size of this background image is 93% smaller
@@ -49,7 +50,7 @@ body {
   }
 }
 @media only screen and (max-width: 500px) {
-  body {
+  html {
     background-size: 100px,cover;
     background-position: 2% bottom, 70% bottom;
     /* The file size of this background image is 93% smaller

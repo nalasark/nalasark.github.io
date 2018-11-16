@@ -1,15 +1,11 @@
 
-body {
-	background-blend-mode: overlay;
-}
-
 html {
-  overflow-y: scroll;
+	background-blend-mode: overlay;
 }
 
 /*-- NAV -- */
 .header {
-	font-family: 'Montserrat', serif;
+	font-family: 'Titillium Web', serif;
     /*display: none;*/
     background-color: #fff;
     position: fixed;
@@ -249,7 +245,7 @@ a.back-to-home:hover {
 
 #portfoliolist {
 	margin-left: 5%;
-	font-family: 'Open Sans', serif;
+	font-family: 'Titillium Web', serif;
 }
 
 #portfoliolist .portfolio {
