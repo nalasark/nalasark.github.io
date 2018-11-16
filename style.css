@@ -4,6 +4,7 @@ html {
   background-image: url(images/bg-me.png), url(images/bg-tmw.jpg);
   background-position: 10% bottom, bottom right;
   background-repeat: no-repeat;
+  height:100%;
   
   /* Image is centered vertically and horizontally at all times */
   /*background-position: top center;*/
