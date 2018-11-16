@@ -54,7 +54,7 @@ body {
 }
 
 /* menu icon */
-.title {
+.header-title {
     text-decoration: none;
     color: #444;
     font-family: "arapey", serif;
@@ -156,7 +156,7 @@ body {
 
 /* 48em = 768px */
 @media (min-width: 48em) {
-	.header .title {display:none;}
+	.header .header-title {display:none;}
     .header li {
         float: left;
     }
