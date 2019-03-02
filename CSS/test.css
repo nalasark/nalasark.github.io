@@ -1,0 +1,92 @@
+html, body {
+  height:100%;
+  margin:0;
+}
+
+#particles-js canvas {
+    display: block;
+    vertical-align: bottom;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    background-image: linear-gradient(#004a7f, #003b6a, #003663,#003663);
+
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease;
+}
+
+#particles-js {
+  height: 90vh;
+  width: 100%;
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
+}
+
+.banner {
+  height: 90vh;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.banner #headerBox {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+}
+
+@media only screen and (min-width: 500px) {
+  .banner #headerImg{
+    width: 150px;
+    padding-bottom: 3vh;
+  }
+
+  .banner #headerName {
+    font-size: 50px;
+    font-weight: 300;
+  }
+
+  .banner #headerPoint {
+      width: 35px;
+      margin-right: -12px;
+    }
+
+  .banner #headerRole {
+    font-size: 16.6px;
+    font-weight: 100;
+    margin-top: 1%;
+    margin-right: 6px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .banner #headerImg{
+    width: 30vw;
+    padding-bottom: 3vh;
+  }
+
+  .banner #headerName {
+    font-size: 10vw;
+    font-weight: 300;
+  }
+
+  .banner #headerPoint {
+    width: 7vw;
+    margin-right: -2vw;
+  }
+
+  .banner #headerRole {
+    font-size: 3.33vw;
+    font-weight: 200;
+    margin-top: 1%;
+    margin-right: 1.2vw;
+  }
+}
+
+.banner #headerFoot {
+  height: 20%;
+}
