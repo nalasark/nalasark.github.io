@@ -15,7 +15,7 @@ html, body, h1, p, a, div, section {
 }
 
 /* Basic */
-body { 
+body {
   color: black;
 }
 
@@ -28,16 +28,24 @@ p {
   font-size: 75px;
   font-weight: 100;
   line-height: 2vmax;
-  font-family: 'oregano';
+  font-family: 'Lora';
 }
 
 #intro {
   margin-top: 5vh;
   font-size: 20px;
-  font-family: 'arapey';
+  font-family: 'Open Sans';
 }
+
+#scroll {
+  margin-top: 4vh;
+  font-size: 15px;
+  font-style: italic;
+  font-family: 'Open Sans';
+}
+
 #break {
-  margin-top:4vh;  
+  margin-top:4vh;
 }
 
 
@@ -59,7 +67,7 @@ p {
   }
 
 .navbar a {
-  display: inline-block;  
+  display: inline-block;
   padding: 2px 8px;
   margin-top: 5px;
 }
@@ -99,7 +107,7 @@ p {
 .about {
   border: 1px solid #ffd3b5;
   background: #ffd3b5;
-  border-bottom: 2px solid #ff9c58;  
+  border-bottom: 2px solid #ff9c58;
 }
 
 .hvr-sweep-to-top {
@@ -149,22 +157,18 @@ p {
 /* Media Queries */
 
 @media only screen and (max-height: 900px) {
-  
   #name {
     font-size:60px;
   }
   #intro {
     font-size:20px;
-
   }
-
   .button {
     font-size:20px;
   }
 }
 
 @media only screen and (max-height: 400px) {
-  
   .container {
     padding-top:30px;
   }
@@ -173,26 +177,23 @@ p {
   }
   #intro {
     font-size:15px;
-
   }
-
   .button {
     font-size:15px;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  
   #name {
     font-size:40px;
   }
   #intro {
     font-size:15px;
-
   }
-
+  #scroll {
+    font-size:12px;
+  }
   .button {
   font-size:15px;
   }
 }
-

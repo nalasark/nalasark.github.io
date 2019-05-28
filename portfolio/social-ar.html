@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+    <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109318386-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109318386-2');
+</script>
+
+        <meta charset="utf-8">
+
+        <!-- // Change these to better suit your project -->
+        <title>Social AR Filters</title>
+        <meta name="description" content="A collage of my social AR filters and effects.">
+        <meta name="keywords" content="snapchat, facebook, lens studio, spark ar, filter, AR">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+        <link rel="icon" href="../images/logo.jpg" type="image/x-icon" />
+        <!-- // CSS Reset – http://meyerweb.com/eric/tools/css/reset/ -->
+        <link rel="stylesheet" type="text/css" href="../CSS/portfolio/reset.css" media="all">
+        <link rel="stylesheet" type="text/css" href="../style.css" media="all">
+        <link rel="stylesheet" type="text/css" href="../CSS/presentational-only.css" media="all">
+
+        <link rel="stylesheet" type="text/css" href="../CSS/portfolio/gesture.css" media="all">
+
+        <link rel="stylesheet" type="text/css" href="../CSS/prism.css" media="all">
+        <script src="../js/prism.js"> </script>
+
+
+        <!-- Google Fonts embed code -->
+        <script type="text/javascript">
+            (function() {
+                var link_element = document.createElement("link"),
+                    s = document.getElementsByTagName("script")[0];
+                if (window.location.protocol !== "http:" && window.location.protocol !== "https:") {
+                    link_element.href = "http:";
+                }
+                link_element.href += "//fonts.googleapis.com/css?family=Titillium+Web:400";
+                link_element.rel = "stylesheet";
+                link_element.type = "text/css";
+                s.parentNode.insertBefore(link_element, s);
+            })();
+        </script>
+
+        <script>
+        function goBack() {
+                window.location = '../';
+        }
+        </script>
+
+    </head>
+
+<body>
+<a onclick="goBack()" class="back-to-portfolio" title="Portfolio">Back to Portfolio</a>
+  <nav class="navbar">
+    <div class="inner">
+      <a href="http://linkedIn.com/in/ngyijunalan"><img border="0" alt="LinkedIn" src="../images/linkedin.png" width="30" height="30"></a>
+      <a href="mailto:mail@alanng.me"><img border="0" alt="Contact" src="../images/mail.png" width="30" height="30"></a>
+    </div>
+  </nav>
+  <div class="wrapper">
+    <div>
+      <article>
+        <h1>Social AR Filters & Effects</h1>
+        <p class="author">Spark AR Studio, Lens Studio, Javascript, Facebook, Snapchat</p>
+
+        <p class="intro">Social AR patforms are the most accessible, and are able to do image-tracking based effects, floor tracking based effects, and facial filter effects.</p>
+
+<p>Women In Technology, publicity postcard for SUTD Marketing.</p>
+<p><style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='http://www.youtube.com/embed/dv93BVYp-yk' frameborder='0' allowfullscreen></iframe></div></p>
+<p class="normal">Through Augmented Reality, more information and immersive storytelling can be presented to the user. For this postcard, AR brings the women inventions mentioned on the postcard to life, allowing and encouraging users to learn more as they interact with the experience. Users can activate the effect through either Facebook or Snapchat, and scan the postcard to begin.</p>
+
+<p class="normal">There are several other social filters that I have created for clients that I can show in person. These include AR mural artwork, AR postcard, and AR stickers.</p>
+
+<p>How I created an AR crossbow game for Snapchat.</p>
+
+        <p><style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='http://www.youtube.com/embed/ArC2z7sPDRw' frameborder='0' allowfullscreen></iframe></div></p>
+
+        <p class="normal center">Aim your phone, pull back the arrow and release to shoot at the bullseye board in AR!</p>
+
+        <p class= "pullquote title">The Design/Development Process</p>
+
+        <img src="../images/portfolio/crossbowAR/0.JPG" alt=""/>
+
+        <p class="normal">I decided on the crossbow AR filter as it required not only an understanding of Lens Studio features & components, but also the need to implement custom components. </p>
+
+        <p class= "pullquote title">Custom Script Components</p>
+        <img src="../images/portfolio/crossbowAR/1.JPG" alt=""/>
+        <p class="normal">These key features are the features that need to be achieved through custom scripts.</p>
+
+        <p class= "title">Input Handling: Elastic Firing</p>
+        <p class="normal">The user is able to pull the arrow back with his finger, and fire it on release. The arrow is subjected to an elastic force mimicking the bowstring, hence the arrow pullback distance should  decrease logarithmically as the user's finger pull distance increases. If the pullback is minimal, the arrow should reset on release, instead of firing. </p>
+        <p class="normal">This finger motion is a recreation of the actual bow arrow firing motion. Recreating a realistic motion is important in keeping the illusion of reality in AR space. </p>
+
+<pre>
+<code class= "language-javascript">//arrow pullback is subjected to a logarithmic increase
+function moveTouch() {
+    var curTouchPos = touchMoveEvent.getTouchPosition();
+    totalTouch -= (prevTouchPos.y - curTouchPos.y)*100;
+    prevTouchPos = curTouchPos;
+
+    outForce = 2*Math.log(2*totalTouch); //logarithmic mapping
+
+    var newPos = originPos.add(forward.uniformScale(-outForce));
+    transform.setLocalPosition(newPos);
+}
+</code></pre>
+
+<pre>
+<code class= "language-javascript">//on tap release, fire arrow
+function endTouch() {
+    if (shooting) return;
+    if (outForce <2 ) { //if below min pull
+        endShoot(); //reset arrow
+    } else { //else, fire arrow
+        //change parent to world
+        newPosW = transform.getWorldPosition();
+        newRotW = transform.getWorldRotation();
+        script.getSceneObject().setParent(null);
+        transform.setWorldPosition(newPosW);
+        transform.setWorldRotation(newRotW);
+        //set values for shootingFunction()
+        forwardW = transform.back.normalize();
+        curTime = new Date().getTime();
+        totalTime = 0;
+        //set values for arrowLeaveBowCheck()
+        frontPosW = script.front.getTransform().getWorldPosition();
+        endPosW = script.end.getTransform().getWorldPosition();
+
+        shooting = true;
+        script.detect.api.UpdateShooting(true); //start checking for collision
+    }
+}
+</code></pre><br>
+
+        <p class= "title">Parabolic Motion & Rotation</p>
+        <p class="normal">To achieve a realistic motion, there are 2 cases to consider. First, when the arrow is still on the bow, there should be no gravity, so the arrow doesn't phase through the bow. Second, after the arrow is off the bow, it should be subjected to gravity to achieve a parabolic motion. </p>
+
+<p class="normal">
+        When the arrow is still on the bow, the next position is calculated with s=vt using instantaneous time, no change in rotation, and the start position is updated. When the arrow is off the bow, the next position is calculated with s=vt+0.5at^2 using total elapsed time from since the arrow left the bow.</p>
+<p class="normal"> The rotation is achieved by mapping the position over time to a quadratic graph y=x^2+2x, where the highest height (zero angle) is half the complete time, where the current angle is derived from the current total elapsed time. The angle is clamped at 90 degrees (pointing down).</p>
+
+<pre>
+<code class= "language-javascript">function shootingFunction() {
+    if (shooting) {
+        //if arrow hit ground, end shoot
+        if(script.front.getTransform().getWorldPosition().y <= 0 ){
+            script.text.api.miss(); //show 'miss' effect
+            endShoot();
+            return;
+        }
+
+        var pos = startPosW;
+        var vel = forwardW.uniformScale(outForce*4); //world forward velocity
+        var acc = new vec3(0,-1*gravity,0); //world acceleration
+
+        nextTime = new Date().getTime();
+        var elapsed = (nextTime-curTime)/1000; //instantaneous elapsed time
+
+        // if arrow still on bow (no gravity, no rotation)
+        if (!arrowLeaveBowCheck){
+            vt = vel.uniformScale(elapsed); //instantaneous elapsed time
+            startPosW = startPosW.add(vt); //update start position
+            pos = startPosW;
+        }
+        //if arrow left bow (calculate gravity, rotation)
+        else {
+            totalTime += elapsed; //total elapsed time
+            //get next position
+            var vt = vel.uniformScale(totalTime);
+            var at2 = acc.uniformScale(0.5*totalTime*totalTime);
+            pos = startPosWorld.add(vt).add(at2);
+            //calculate rotation
+            var rot = transform.getWorldRotation();
+            var halfT = (2*vel.length*Math.sin(launchAngle)/gravity)/2;
+            var x = totalTime/halfT;
+            var y = -(x*x)+2*x;
+            var newAngle = (x<1) ? launchAngle-y*launchAngle : -(launchAngle-y*launchAngle);
+            newAngle = (newAngle < -Math.PI/2) ? -Math.PI/2:newAngle; //clamp
+            //set angle
+            var newRotV = rot.toEulerAngles();
+            newRotV.x = newAngle;
+            rot = quat.fromEulerVec(newRotV);
+        }
+        transform.setWorldRotation(rot);
+        transform.setWorldPosition(pos);
+    }
+}
+</code></pre>
+
+<pre>
+<code class= "language-javascript">//checks if arrow has left bow
+function arrowLeaveBowCheck(){
+    var curEndPos = script.end.getTransform().getWorldPosition();
+    var leave = false;
+
+    if (endPosW.z < frontPosW.z) {leave = (curEndPos.z > frontPosW.z) ? true:false;}
+    else {leave = (curEndPos.z < frontPosW.z) ? true:false;}
+    if (leave && endPosW.x < frontPosW.x) {leave = (curEndPos.x > frontPosW.x) ? true:false;}
+    else {leave = (curEndPos.x < frontPosW.x) ? true:false;}
+    return leave;
+}
+</code></pre>
+
+<pre>
+<code class= "language-javascript">//shootingFunction called every frame
+var shootingEvent = script.createEvent("UpdateEvent");
+shootingEvent.bind(shootingFunction);
+</code></pre><br>
+
+        <p class= "title">Collision Detection</p>
+        <p class="normal">Initially, I implemented a basic Axis Aligned Bounding Box (AABB) Collider & Detector. However, it cannot handle rotation, as the scale of the cube cannot be updated to the object dimensions in axis space.</p>
+        <p class="normal">Instead, I went with a custom collision detector: Many Custom Shapes to One Point. <br> The detection script is written such that it calls the collisionCheck() of each custom collider, hence it can handle different collider shapes. </p>
+        <p class="normal">The cylinder collision script basically handles 2 checks, whether the point is within its 2 planes, and whether the perpendicular distance of the point from its normal vector is within its radius.</p>
+
+<pre>
+<code class= "language-javascript">//cylinder-point collision check
+var unit_cube = 2; //unit length of default cylinder
+var transformShape = script.shape.getTransform();
+
+var thickness = unit_cube * transformShape.getLocalScale().y;
+var radius = unit_cube/2 * transformShape.getLocalScale().x; //assume circle (x scale = z scale)
+
+script.api.collisionCheck = function(point){
+    var normal = transformShape.up.normalize();
+    var origin = transformShape.getWorldPosition().add(normal.uniformScale(thickness/2));
+    var dist_pointToPlane = normal.dot(point.sub(origin));
+    var projected_point = point.sub(normal.uniformScale(dist_pointToPlane));
+    var dist_projectedToOrigin = projected_point.sub(origin).length;
+    var collided = (Math.abs(dist_pointToPlane) < thickness && dist_projectedToOrigin <= radius) ? true : false;
+    var outRadius = dist_projectedToOrigin/transformShape.getLocalScale().x;
+    return [collided,outRadius];
+}
+</code></pre>
+
+<pre>
+<code class= "language-javascript">//collision detector
+function CheckColliders(){
+    if(!shooting) return;
+    var hitPos = script.arrow.getTransform().getWorldPosition();
+    var hitRot = script.arrow.getTransform().getWorldRotation();
+    for (i=0; i < colliders.length; i++){
+        var collided = colliders[i].api.collisionCheck(point.api.GetPosition());
+        if (collided[0]){
+            script.arrow.api.intersect(colliders[i].api.getObject(),hitPos,hitRot);
+            script.text.api.hit(collided[1]);
+            break;
+        }
+    }
+}
+</code></pre><br>
+
+      </article>
+    </div>
+  </div>
+</body>
+</html>

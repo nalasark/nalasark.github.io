@@ -1,61 +1,147 @@
 html {
-  /* Location of the image */
-  /*background-image: url(images/background.jpg);*/
-  background-image: url(images/bg-me.png), url(images/bg-tmw.jpg);
+height:100%;
+}
+body {
+height:100%;
+}
+
+#main_outer {
+  background-image: url(images/bg-tmw.jpg);
+  background-position: 80% 100%;
+  background-repeat: no-repeat;
+  height:100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #eff0f6;
+}
+@media only screen and (max-width: 500px) {
+  #main_outer {
+    background-position: 74% 0%;
+  }
+}
+
+#main_inner {
+  background-image: url(images/bg-me.png);
   background-position: 10% bottom, bottom right;
   background-repeat: no-repeat;
   height:100%;
-  
-  /* Image is centered vertically and horizontally at all times */
-  /*background-position: top center;*/
-  
-  /* Image doesn't repeat */
-  /*background-repeat: no-repeat;*/
-  
-  /* Makes the image fixed in the viewport so that it doesn't move when 
-     the content height is greater than the image height */
-  background-attachment: fixed;
-  
-  /* This is what makes the background image rescale based on its container's size */
+  background-attachment: scroll;
   background-size: 250px,cover;
-  
-  /* Pick a solid background color that will be displayed while the background image is loading */
-  background-color: #eff0f6;
-
-  /* SHORTHAND CSS NOTATION
-   * background: url(background-photo.jpg) center center cover no-repeat fixed;
-   */
 }
-
-/* For mobile devices */
 @media only screen and (max-width: 1200px) {
-  html {
+  #main_inner {
     background-size: 150px,cover;
     background-position: 10% bottom, 80% bottom;
-    height:100%;
-    /* The file size of this background image is 93% smaller
-     * to improve page load speed on mobile internet connections 
-    background-image: url(images/background.jpg);
-    background-size: cover;*/
   }
 }
 @media only screen and (max-width: 800px) {
-  html {
+  #main_inner {
     background-size: 120px,cover;
-    background-position: 10% bottom, 70% bottom;
-    /* The file size of this background image is 93% smaller
-     * to improve page load speed on mobile internet connections 
-    background-image: url(images/background.jpg);
-    background-size: cover;*/
+    background-position: 10%  70% bottom;
   }
 }
-@media only screen and (max-width: 500px) {
-  html {
-    background-size: 100px,cover;
-    background-position: 2% bottom, 70% bottom;
-    /* The file size of this background image is 93% smaller
-     * to improve page load speed on mobile internet connections 
-    background-image: url(images/background.jpg);
-    background-size: cover;*/
+
+#title {
+  padding:2%;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Lora', serif;
+}
+
+.works {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  font-family: 'Open Sans';
+  width:100%;
+}
+
+.work {
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  margin-bottom:2%;
+  padding: 1%;
+}
+.work img{
+  width:33vw;
+  min-width:360px;
+  max-width:550px;
+  height:auto;
+}
+.work .details{
+  margin: 1%;
+  width:33vw;
+  min-width:360px;
+  max-width:550px;
+  display: flex;
+  flex-direction: column;
+}
+.work .details #work_title {
+  font-family: 'Lora', serif;
+  margin: 1%;
+  margin-top:0%;
+  font-size: 32px;
+}
+.work .details p {
+  margin: 1%;
+  text-align: left;
+  font-size: 20px;
+}
+.work .details #medium {
+  font-style: italic;
+  font-size:18px;
+}
+.work .details #from {
+  font-size:18px;
+}
+.work .details #award {
+  font-style: italic;
+  font-size:18px;
+}
+.work .details #align_bottom {
+  /*height: 100%;
+  margin-top:3%;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;*/
+}
+@media only screen and (max-width: 700px) {
+  .works {
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
   }
+  .work {
+  flex-direction: column;
+  max-width:550px;
+  }
+  .work img {
+  width: 100%;
+  padding: 0%;
+  }
+  .work .details{
+  padding: 0%;
+  padding-top: 1%;
+  width:100vw;
+  }
+}
+
+@media only screen and (max-height: 1200px) {
+  #title {font-size:25px;}
+  .work .details #work_title { font-size:25px; margin-bottom:0px;}
+  .work .details p { font-size:15px; }
+  .work .details #medium { font-size:12px; margin-top:0px;}
+  .work .details #from { font-size:12px; margin-bottom:0px;}
+  .work .details #award { font-size:12px; margin-top:0px;}
+}
+@media only screen and (max-height: 1030px) {
+  #title {font-size:25px;}
+  .work .details #work_title { font-size:20px; margin-bottom:0px;}
+  .work .details p { font-size:16px;}
+  .work .details #medium { font-size:14px; margin-top:0px;}
+  .work .details #from { font-size:14px; margin-bottom:0px;}
+  .work .details #award { font-size:14px; margin-top:0px;}
 }

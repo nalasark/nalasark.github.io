@@ -27,9 +27,9 @@
         <link rel="stylesheet" type="text/css" href="../CSS/portfolio/reset.css" media="all">
         <link rel="stylesheet" type="text/css" href="../style.css" media="all">
         <link rel="stylesheet" type="text/css" href="../CSS/presentational-only.css" media="all">
-        
+
         <link rel="stylesheet" type="text/css" href="../CSS/portfolio/gesture.css" media="all">
-        
+
         <link rel="stylesheet" type="text/css" href="../CSS/prism.css" media="all">
         <script src="../js/prism.js"> </script>
 
@@ -51,12 +51,7 @@
 
         <script>
         function goBack() {
-            var prev = document.referrer;
-            if (prev.indexOf("nalasark.com/portfolio")== -1) {
-                window.location = '../portfolio';
-            }  else {
-                window.history.back();
-            }
+                window.location = '../';
         }
         </script>
 
@@ -66,8 +61,8 @@
 <a onclick="goBack()" class="back-to-portfolio" title="Portfolio">Back to Portfolio</a>
   <nav class="navbar">
     <div class="inner">
-      <a href="http://linkedIn.com/in/ngyijunalan"><img border="0" alt="LinkedIn" src="../images/linkedin.png" width="30" height="30"></a> 
-      <a href="mailto:alannyj@gmail.com"><img border="0" alt="Contact" src="../images/mail.png" width="30" height="30"></a>
+      <a href="http://linkedIn.com/in/ngyijunalan"><img border="0" alt="LinkedIn" src="../images/linkedin.png" width="30" height="30"></a>
+      <a href="mailto:mail@alanng.me"><img border="0" alt="Contact" src="../images/mail.png" width="30" height="30"></a>
     </div>
   </nav>
   <div class="wrapper">
@@ -76,7 +71,9 @@
         <h1>AR Wand</h1>
         <p class="author">SUTD What The Hack 2018: Best Overall Hack, Best Art & Design</p>
 
-        <p><style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='http://www.youtube.com/embed/ArC2z7sPDRw' frameborder='0' allowfullscreen></iframe></div></p>
+<p class="normal">ARWand is created in 24 hours as part of the SUTD What The Hack x Singapore VR Hackathon 2018. For the full pitch deck, please go here: <a href="https://docs.google.com/presentation/d/1lW-By2XnysdloYVmZF3r0Fc6gj9D1oDtxxuKgBhamxE/edit?usp=sharing">pitch deck slides</a></p>
+
+        <img src="../images/portfolio/arwand/arwand1.jpg" alt=""/>
 
         <p class="normal">Today, Virtual Reality has unlocked the potential to create new forms of art and design, with tools like Oculus Quill and Gravity Sketch. </p>
 
@@ -90,25 +87,23 @@
 
         <p class="normal center">The AR Wand is designed to elimiate the barrier between real 3D space and the 2D screen.</p>
 
-        <img src="../images/portfolio/crossbowAR/0.JPG" alt=""/>
+        <img src="../images/portfolio/arwand/arwand2.jpg" alt=""/>
 
         <p class="normal">Simply draw in real 3D space. </p>
 
-        <img src="../images/portfolio/crossbowAR/0.JPG" alt=""/>
-
         <p class="normal">Know exactly where you draw (with object occlusion). </p>
 
-        <img src="../images/portfolio/crossbowAR/0.JPG" alt=""/>
+        <img src="../images/portfolio/arwand/arwand3.jpg" alt=""/>
 
         <p class="normal">With a low-cost tool hence minimal barrier of adoption. </p>
 
         <p class= "pullquote title">A software of limitless possibilities</p>
-        <img src="../images/portfolio/crossbowAR/1.JPG" alt=""/>
-        <p class="normal">Draw anytime, anywhere with relocalisation.</p> 
-        <img src="../images/portfolio/crossbowAR/1.JPG" alt=""/>
-        <p class="normal">With multiple 'brushes' and interative design tools.</p> 
-        <img src="../images/portfolio/crossbowAR/1.JPG" alt=""/>
-        <p class="normal">Create together with friends and strangers everywhere, through multiplayer.</p> 
+        <img src="../images/portfolio/arwand/arwand4.jpg" alt=""/>
+        <p class="normal">Draw anytime, anywhere with relocalisation.</p>
+        <img src="../images/portfolio/arwand/arwand5.jpg" alt=""/>
+        <p class="normal">With multiple 'brushes' and interative design tools.</p>
+        <img src="../images/portfolio/arwand/arwand6.jpg" alt=""/>
+        <p class="normal">Create together with friends and strangers everywhere, through multiplayer.</p>
 
         <p class= "pullquote title">How It Was Done</p>
         <p class="normal">With only 24 hours on the clock, I knew I had to plan carefully to create a working prototype. Of course, I already had the idea in mind (& the pitch) before I decided to join the competition.</p>
@@ -128,165 +123,7 @@
 
         <p class= "pullquote title">Reflections</p>
         <p class="normal">We won Best Art & Design Hack and Overall Best Hack! Pretty surreal though I did go in with the mindset to win. It was a good hackathon to wrap up the competition frenzies during university. Thinking back, the prototype wasn't as bad as I thought. Yes, I practically abandoned 3/4 of the development, but I only had 24 hours and the judges saw the idea, demonstrated prototype and the pitch - and it was powerful enough to convince them. If everything went smooth it wouldn't be a competition, would've been good but wasn't as important. What was important was really how I prioritised my timing - and making sure the tools that I actually needed to work, worked and I pitched it properly.</p>
-
-<pre>
-<code class= "language-javascript">//arrow pullback is subjected to a logarithmic increase
-function moveTouch() {
-    var curTouchPos = touchMoveEvent.getTouchPosition();
-    totalTouch -= (prevTouchPos.y - curTouchPos.y)*100;
-    prevTouchPos = curTouchPos;
-    
-    outForce = 2*Math.log(2*totalTouch); //logarithmic mapping
-
-    var newPos = originPos.add(forward.uniformScale(-outForce));    
-    transform.setLocalPosition(newPos);
-}
-</code></pre>
-
-<pre>
-<code class= "language-javascript">//on tap release, fire arrow
-function endTouch() {
-    if (shooting) return;
-    if (outForce <2 ) { //if below min pull
-        endShoot(); //reset arrow
-    } else { //else, fire arrow
-        //change parent to world
-        newPosW = transform.getWorldPosition();
-        newRotW = transform.getWorldRotation();
-        script.getSceneObject().setParent(null); 
-        transform.setWorldPosition(newPosW);
-        transform.setWorldRotation(newRotW);
-        //set values for shootingFunction()
-        forwardW = transform.back.normalize();
-        curTime = new Date().getTime();
-        totalTime = 0;
-        //set values for arrowLeaveBowCheck()
-        frontPosW = script.front.getTransform().getWorldPosition();
-        endPosW = script.end.getTransform().getWorldPosition();
-
-        shooting = true;
-        script.detect.api.UpdateShooting(true); //start checking for collision
-    }
-}
-</code></pre><br>
-
-        <p class= "title">Parabolic Motion & Rotation</p>
-        <p class="normal">To achieve a realistic motion, there are 2 cases to consider. First, when the arrow is still on the bow, there should be no gravity, so the arrow doesn't phase through the bow. Second, after the arrow is off the bow, it should be subjected to gravity to achieve a parabolic motion. </p>
-
-<p class="normal">  
-        When the arrow is still on the bow, the next position is calculated with s=vt using instantaneous time, no change in rotation, and the start position is updated. When the arrow is off the bow, the next position is calculated with s=vt+0.5at^2 using total elapsed time from since the arrow left the bow.</p>
-<p class="normal"> The rotation is achieved by mapping the position over time to a quadratic graph y=x^2+2x, where the highest height (zero angle) is half the complete time, where the current angle is derived from the current total elapsed time. The angle is clamped at 90 degrees (pointing down).</p>
-
-<pre>
-<code class= "language-javascript">function shootingFunction() {
-    if (shooting) {
-        //if arrow hit ground, end shoot
-        if(script.front.getTransform().getWorldPosition().y <= 0 ){
-            script.text.api.miss(); //show 'miss' effect
-            endShoot();
-            return;
-        }
-        
-        var pos = startPosW;
-        var vel = forwardW.uniformScale(outForce*4); //world forward velocity
-        var acc = new vec3(0,-1*gravity,0); //world acceleration
-
-        nextTime = new Date().getTime();
-        var elapsed = (nextTime-curTime)/1000; //instantaneous elapsed time
-
-        // if arrow still on bow (no gravity, no rotation)
-        if (!arrowLeaveBowCheck){
-            vt = vel.uniformScale(elapsed); //instantaneous elapsed time
-            startPosW = startPosW.add(vt); //update start position
-            pos = startPosW;
-        } 
-        //if arrow left bow (calculate gravity, rotation)
-        else {
-            totalTime += elapsed; //total elapsed time
-            //get next position
-            var vt = vel.uniformScale(totalTime);
-            var at2 = acc.uniformScale(0.5*totalTime*totalTime);
-            pos = startPosWorld.add(vt).add(at2);
-            //calculate rotation
-            var rot = transform.getWorldRotation();
-            var halfT = (2*vel.length*Math.sin(launchAngle)/gravity)/2;
-            var x = totalTime/halfT;
-            var y = -(x*x)+2*x;
-            var newAngle = (x<1) ? launchAngle-y*launchAngle : -(launchAngle-y*launchAngle);
-            newAngle = (newAngle < -Math.PI/2) ? -Math.PI/2:newAngle; //clamp
-            //set angle
-            var newRotV = rot.toEulerAngles();
-            newRotV.x = newAngle;
-            rot = quat.fromEulerVec(newRotV);
-        }
-        transform.setWorldRotation(rot);
-        transform.setWorldPosition(pos);
-    }
-}
-</code></pre>
-
-<pre>
-<code class= "language-javascript">//checks if arrow has left bow
-function arrowLeaveBowCheck(){
-    var curEndPos = script.end.getTransform().getWorldPosition();
-    var leave = false;
-
-    if (endPosW.z < frontPosW.z) {leave = (curEndPos.z > frontPosW.z) ? true:false;}
-    else {leave = (curEndPos.z < frontPosW.z) ? true:false;}
-    if (leave && endPosW.x < frontPosW.x) {leave = (curEndPos.x > frontPosW.x) ? true:false;}
-    else {leave = (curEndPos.x < frontPosW.x) ? true:false;}
-    return leave;
-}
-</code></pre>
-
-<pre>
-<code class= "language-javascript">//shootingFunction called every frame
-var shootingEvent = script.createEvent("UpdateEvent");
-shootingEvent.bind(shootingFunction);
-</code></pre><br>
-        
-        <p class= "title">Collision Detection</p>
-        <p class="normal">Initially, I implemented a basic Axis Aligned Bounding Box (AABB) Collider & Detector. However, it cannot handle rotation, as the scale of the cube cannot be updated to the object dimensions in axis space.</p>
-        <p class="normal">Instead, I went with a custom collision detector: Many Custom Shapes to One Point. <br> The detection script is written such that it calls the collisionCheck() of each custom collider, hence it can handle different collider shapes. </p>
-        <p class="normal">The cylinder collision script basically handles 2 checks, whether the point is within its 2 planes, and whether the perpendicular distance of the point from its normal vector is within its radius.</p>
-
-<pre>
-<code class= "language-javascript">//cylinder-point collision check
-var unit_cube = 2; //unit length of default cylinder
-var transformShape = script.shape.getTransform();
-
-var thickness = unit_cube * transformShape.getLocalScale().y;
-var radius = unit_cube/2 * transformShape.getLocalScale().x; //assume circle (x scale = z scale)
-
-script.api.collisionCheck = function(point){
-    var normal = transformShape.up.normalize();
-    var origin = transformShape.getWorldPosition().add(normal.uniformScale(thickness/2));
-    var dist_pointToPlane = normal.dot(point.sub(origin));
-    var projected_point = point.sub(normal.uniformScale(dist_pointToPlane));
-    var dist_projectedToOrigin = projected_point.sub(origin).length;
-    var collided = (Math.abs(dist_pointToPlane) < thickness && dist_projectedToOrigin <= radius) ? true : false;
-    var outRadius = dist_projectedToOrigin/transformShape.getLocalScale().x;
-    return [collided,outRadius];
-}
-</code></pre>
-
-<pre>
-<code class= "language-javascript">//collision detector
-function CheckColliders(){
-    if(!shooting) return;
-    var hitPos = script.arrow.getTransform().getWorldPosition();
-    var hitRot = script.arrow.getTransform().getWorldRotation();
-    for (i=0; i < colliders.length; i++){
-        var collided = colliders[i].api.collisionCheck(point.api.GetPosition());
-        if (collided[0]){
-            script.arrow.api.intersect(colliders[i].api.getObject(),hitPos,hitRot);
-            script.text.api.hit(collided[1]);
-            break;        
-        }
-    }
-}
-</code></pre><br>
-
+<br>
       </article>
     </div>
   </div>

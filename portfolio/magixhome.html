@@ -27,9 +27,9 @@
         <link rel="stylesheet" type="text/css" href="../CSS/portfolio/reset.css" media="all">
         <link rel="stylesheet" type="text/css" href="../style.css" media="all">
         <link rel="stylesheet" type="text/css" href="../CSS/presentational-only.css" media="all">
-        
+
         <link rel="stylesheet" type="text/css" href="../CSS/portfolio/gesture.css" media="all">
-        
+
                 <!-- Google Fonts embed code -->
         <script type="text/javascript">
             (function() {
@@ -47,12 +47,7 @@
 
 <script>
 function goBack() {
-    var prev = document.referrer;
-    if (prev.indexOf("nalasark.com/portfolio")== -1) {
-        window.location = '../portfolio';
-    }  else {
-        window.history.back();
-    }
+        window.location = '../';
 }
 </script>
 
@@ -62,26 +57,40 @@ function goBack() {
 <a onclick="goBack()" class="back-to-portfolio" title="Portfolio">Back to Portfolio</a>
   <nav class="navbar">
     <div class="inner">
-      <a href="http://linkedIn.com/in/ngyijunalan"><img border="0" alt="LinkedIn" src="../images/linkedin.png" width="30" height="30"></a> 
-      <a href="mailto:alannyj@gmail.com"><img border="0" alt="Contact" src="../images/mail.png" width="30" height="30"></a>
+      <a href="http://linkedIn.com/in/ngyijunalan"><img border="0" alt="LinkedIn" src="../images/linkedin.png" width="30" height="30"></a>
+      <a href="mailto:mail@alanng.me"><img border="0" alt="Contact" src="../images/mail.png" width="30" height="30"></a>
     </div>
   </nav>
   <div class="wrapper">
     <div>
       <article>
         <h1>MagixHome Mobile VR</h1>
-        <p class="author">Sky Optimum Technology</p>     
+        <p class="author">Sky Optimum Technology</p>
         <p class="intro">A mobile VR interior design interactive experience.</p>
         <p><style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='http://www.youtube.com/embed/O059cX8KPjY' frameborder='0' allowfullscreen></iframe></div></p>
 
-        <p> With the release of the new motion controller for GearVR, the interaction possibilities for mobile VR was truly unlocked. Previously, user inputs were bound to buttons on the headset or gamepads, which kills the immersion.</p>
-        <p> In my 3 months at SkyOpts, my task was to research, experiment and design user interaction flows for the GearVR controller - particularly for MagixHome.</p>
+        <p class="normal"> With the release of the new motion controller for GearVR, the interaction possibilities for mobile VR was truly unlocked. Previously, user inputs were bound to buttons on the headset or gamepads, which kills the immersion.</p>
+        <p class="normal"> In my 3 months at SkyOpts, my task was to research, experiment and design user interaction flows for the GearVR controller - particularly for MagixHome.</p>
 
-        <p class="pullquote"> More details will be updated soon. Do check back! </p>
+        <p class="pullquote"> Core focus on designing for 3DoF motion controller. </p>
+
+        <p class="normal">In the video, I demonstrate the user experience design implemented to accomodate a 3DoF control scheme. </p>
+
+        <p class="pullquote"> Teleportation & Object Manipulationn controls. </p>
+        <p class="normal">The final user control experience is designed to be self-intuitive. When pointing at the ground, the user can teleport to the specified location. When pointing at a furniture, the user can select the furniture for manipulation. This is done by holding down on the trigger to shoot a ray.</p>
+        <p class="normal">When moving a furniture, the same control mechanism is adopted. When pointing the ray around, the furniture will automatically move to the raycasted location. Holding down the trigger will let you 'hold' the furniture in your hand and allow you to teleport instead. By using the same trigger control, it becomes very intuitive.</p>
+        <p class="normal">Finally, to rotate the furniture, simply touch & rotate along the perimeter of the circular touch pad. This has been tested to be an intuitive motion that users will execute without being taught.</p>
+
+        <p class="pullquote"> Furniture Physics Simulation. </p>
+        <p class="normal">WHen in object edit(move) mode, all furniture freeze in time. This means that you can remove a table from below a vase. Only when you place the table elsewhere, will gravity & time resume, and the objects will fall. This helps prevent unintentional shifting and bumping of objects due to physics while moving the desired piece.</p>
+
+        <p class="pullquote"> Motion Mechanics. </p>
+        <p class="normal">Teleportation is the main mode of movement in the game. Movement via arm swing is included, to micmic a more realistic walk motion. This causes less nauseous than flying as an actual body motion is translated into virtual motion.</p>
+
         <br>
-        <!-- <img src="../images/portfolio/vr/0.jpg" alt=""/>  
+        <!-- <img src="../images/portfolio/vr/0.jpg" alt=""/>
         <p class="pullquote">Brainstorming and rapid prototyping the experience.</p>
-        <img src="../images/portfolio/vr/1.jpg" alt=""/>     
+        <img src="../images/portfolio/vr/1.jpg" alt=""/>
         <img src="../images/portfolio/vr/2.jpg" alt=""/>     !-->
         <br><br>
       </article>
