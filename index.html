@@ -37,12 +37,6 @@
   <script type="text/javascript">
   		jQuery(function( $ ){
 
-  			// This one is important, many browsers don't reset scroll on refreshes
-  			// Reset all scrollable panes to (0,0)
-  			$('div.pane').scrollTo(0);
-  			// Reset the screen to (0,0)
-  			$.scrollTo(0);
-
   			$('#settings-step').click(function() {
   				$.scrollTo(document.getElementById("title"), 800, {step:function(now) {
   				}});
@@ -76,7 +70,7 @@
 
 
       <p id="scroll">scroll for more</p>
-      <a id="settings-step" href="#works"><div class="center-con">
+      <a id="settings-step" href="#"><div class="center-con">
           <div class="round">
               <span></span>
               <span></span>
