@@ -27,12 +27,28 @@
 
   <!-- jQuery, fonts, CSS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans:300" rel="stylesheet">
   <link rel="stylesheet" href="CSS/presentational-only.css">
   <link rel="stylesheet" href="style.css">
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <script type="text/javascript">
+  		jQuery(function( $ ){
+
+  			// This one is important, many browsers don't reset scroll on refreshes
+  			// Reset all scrollable panes to (0,0)
+  			$('div.pane').scrollTo(0);
+  			// Reset the screen to (0,0)
+  			$.scrollTo(0);
+
+  			$('#settings-step').click(function() {
+  				$.scrollTo(document.getElementById("title"), 800, {step:function(now) {
+  				}});
+  			});
+  		});
+  	</script>
 
 </head>
 
@@ -57,8 +73,18 @@
       <p id="name">Alan Ng</p>
       <p id="intro">Immersive Technologist.<br>
       AR, VR, UX & Storytelling.</p>
-      <p id="scroll">- scroll down to view projects -</p>
-      </section>
+
+
+      <p id="scroll">scroll for more</p>
+      <a id="settings-step" href="#works"><div class="center-con">
+          <div class="round">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+      </div></a>
+          </section>
   </header>
 </div></div>
 
@@ -72,37 +98,58 @@
     </a>
     <div class="details">
       <span id="work_title">PaperChase AR</span>
-      <p id="desc">Gamified AR treasure hunt installation of recycling bins in ArtScience museum.</p>
+      <!--<p id="desc">Gamified AR treasure hunt installation of recycling bins in ArtScience museum.</p>
+!-->
       <p id="medium">iOS App, ARKit, Unity.</p>
       <div id="align_bottom">
-      <p id="from">ArtxTechForGood Exhibition, Singapore ArtScience Museum.</p>
+      <p id="from">MeshMinds 2.0 ArtxTechForGood Exhibition, ArtScience Museum.</p>
       <p id="award">Recipient of the Marina Bay Sands Sustainbility Award.</p>
       </div>
     </div>
   </div>
   <!--work!-->
   <div class="work">
-    <a href="/portfolio/archi">
-      <img src="images/portfolio/archi.jpg">
+    <a href="/portfolio/social-ar">
+      <img src="images/portfolio/ideaink.jpg">
     </a>
     <div class="details">
-      <span id="work_title">VR & AR with Architecture Cirriculum</span>
-      <p id="desc">A collection of AR/VR academia & cirricular work with the SUTD Architecture department, as part of IRL.</p>
-      <p id="medium">Oculus Rift, Unreal Engine, Unity, Vuforia, ARKit.</p>
+      <span id="work_title">Social Media AR Illustrations & Filters</span>
+      <!--<p id="desc">A montage of social AR effects, ranging from AR postcards to animated mural art.</p>
+      !-->
+      <p id="medium">Facebook & Snapchat Filters, Spark AR Studio, Lens Studio</p>
       <div id="align_bottom">
-      <p id="from">Immersive Realities Lab, SUTD.</p>
+      <p id="from">IdeaInk Illustrations, SUTD Marketing.</p>
       </div>
     </div>
   </div>
   <!--work!-->
   <div class="work">
-    <a href="/portfolio/social-ar">
-      <img src="images/portfolio/socialar.jpg">
+    <a href="/portfolio/pear">
+      <img src="images/portfolio/pear.jpg">
     </a>
     <div class="details">
-      <span id="work_title">Social Media AR Filters</span>
-      <p id="desc">A montage of social AR effects, ranging from AR postcards to animated mural art.</p>
-      <p id="medium">Facebook (Spark AR) App & Snapchat (Lens Studio) App.</p>
+      <span id="work_title">Project PEAR: Geolocation AR Game</span>
+      <!--<p id="desc">A montage of social AR effects, ranging from AR postcards to animated mural art.</p>
+      !-->
+      <p id="medium">Mobile Game, Unity, MapBox, ARFoundation</p>
+      <div id="align_bottom">
+      <p id="from">SUTD Game Lab.</p>
+      </div>
+    </div>
+  </div>
+  <!--work!-->
+  <div class="work">
+    <a href="/portfolio/archi">
+      <img src="images/portfolio/archi2.jpg">
+    </a>
+    <div class="details">
+      <span id="work_title">VR & AR for Architecture Education</span>
+      <!--<p id="desc">A collection of AR/VR academia & cirricular work with the SUTD Architecture department, as part of IRL.</p>
+      !-->
+      <p id="medium">VR Demo, Oculus Rift, Unreal Engine; iOS App, Unity, Vuforia, ARKit</p>
+      <div id="align_bottom">
+      <p id="from">SUTD Immersive Realities Lab.</p>
+      </div>
     </div>
   </div>
     <!--work!-->
@@ -112,13 +159,30 @@
     </a>
     <div class="details">
       <span id="work_title">Custo AR</span>
-      <p id="desc">Measure, generate and visualize shelving designs that fits perfectly to your space requirements, through your phone.</p>
+      <!--<p id="desc">Measure, generate and visualize shelving designs that fits perfectly to your space requirements, through your phone.</p>
+      !-->
       <p id="medium">iOS App, ARKit, Native Xcode.</p>
       <div id="align_bottom">
       <p id="from">CUSTO, Weijenberg.</p>
       </div>
     </div>
   </div>
+  <!--work!-->
+<div class="work">
+<a href="/portfolio/arwand">
+  <img src="images/portfolio/arwand.jpg">
+</a>
+<div class="details">
+  <span id="work_title">AR Wand</span>
+  <!--<p id="desc">Create 3D digital art in real space.</p>
+  !-->
+  <p id="medium">Prototype, ARKit, Unity, iPhone.</p>
+  <div id="align_bottom">
+  <p id="from">Singapore VR Hackathon - SUTD What The Hack 2018.</p>
+  <p id="award">Best Art/Design Award, Overall Best Award.</p>
+  </div>
+</div>
+</div>
       <!--work!-->
   <div class="work">
     <a href="/portfolio/magixhome">
@@ -126,31 +190,49 @@
     </a>
     <div class="details">
       <span id="work_title">MagixHome Mobile VR</span>
-      <p id="desc">Interior design experience in VR, redesigned for GearVR + controller.</p>
-      <p id="medium">UX Prototype, GearVR, Unity.</p>
+      <!--<p id="desc">Interior design experience in VR, redesigned for GearVR + controller.</p>
+      !-->
+      <p id="medium">UX Prototype, GearVR + controller, Unity.</p>
       <div id="align_bottom">
       <p id="from">Sky Optimum Technologies.</p>
       </div>
     </div>
   </div>
-      <!--work!-->
+  <!--work!-->
   <div class="work">
-    <a href="/portfolio/arwand">
-      <img src="images/portfolio/arwand.jpg">
-    </a>
-    <div class="details">
-      <span id="work_title">AR Wand</span>
-      <p id="desc">Create 3D digital art in real space.</p>
-      <p id="medium">Prototype, ARKit, Unity, iPhone.</p>
-      <div id="align_bottom">
-      <p id="from">Singapore VR Hackathon, SUTD What The Hack 2018.</p>
-      <p id="award">Best Art/Design Award, Overall Best Award.</p>
-      </div>
+  <a href="/portfolio/varch">
+    <img src="images/portfolio/varch2.jpg">
+  </a>
+  <div class="details">
+    <span id="work_title">VaRch: UX for Architecture in VR</span>
+    <!--<p id="desc">Create 3D digital art in real space.</p>
+    !-->
+    <p id="medium">Prototype, Unity, HTC Vive, GearVR.</p>
+    <div id="align_bottom">
+    <p id="from">Singapore VR Hackathon 2017.</p>
+    <p id="award">Champion.</p>
     </div>
   </div>
+  </div>
+  <!--work!-->
+  <div class="work">
+  <a href="/portfolio/gesture">
+    <img src="images/portfolio/gesture.gif">
+  </a>
+  <div class="details">
+    <span id="work_title">Gesture Navigation for Maps</span>
+    <!--<p id="desc">Create 3D digital art in real space.</p>
+    !-->
+    <p id="medium">Gesture, Myo Armband, JS, Google Maps, ePlanner.</p>
+    <div id="align_bottom">
+    <p id="from">Urban Redevelopment Authority (URA) Digital Planning Lab.</p>
+    </div>
+  </div>
+  </div>
+
 
 </div>
-
+<br>
 </body>
 
 </html>

@@ -201,22 +201,22 @@ a.back-to-home {
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	border-radius: 30px;
-}	
+}
 
 a.back-to-home:hover {
 	opacity: 0.5;
 }
 
-.container { 
-	position: relative; 
-	width: 960px; 
-	margin: 0 auto; 
+.container {
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
 	-webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
-  transition: all 1s ease;	
+  transition: all 1s ease;
 }
- 
+
 #filters {
 	font-family: 'Montserrat', serif;
 	margin:1%;
@@ -229,15 +229,15 @@ a.back-to-home:hover {
 	#filters li {
 		float:left;
 	}
-	
+
 	#filters li span {
 		display: block;
-		padding:5px 20px;		
+		padding:5px 20px;
 		text-decoration:none;
 		color:black;
 		cursor: pointer;
 	}
-	
+
 	#filters li span.active {
 		background: gray;
 		color:#fff;
@@ -271,7 +271,7 @@ a.back-to-home:hover {
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
-	
+
 .portfolio img:hover {
 	opacity: .7;
 }
@@ -479,7 +479,7 @@ a.back-to-home:hover {
 	#portfoliolist .portfolio {
 		width:28%;
 		margin:1%;
-	}	
+	}
 
 }
 
@@ -495,7 +495,7 @@ a.back-to-home:hover {
 		#portfoliolist .portfolio {
 		width:30%;
 		margin:1%;
-	}		
+	}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 910px) {
@@ -510,7 +510,7 @@ a.back-to-home:hover {
 		#portfoliolist .portfolio {
 		width:30%;
 		margin:1%;
-	}		
+	}
 }
 
 
@@ -520,19 +520,19 @@ a.back-to-home:hover {
 	#portfoliolist .portfolio {
 		width:45%;
 		margin:1%;
-	}		
+	}
 		#filters {
 		font-size: 11px;
 	}
 	.text-title {
 		font-size: 11px;
-	}		
+	}
 }
 
 @media only screen and (max-width: 430px){
 	#portfoliolist .portfolio {
 		width:90%;
 		margin:1%;
-	}			
+	}
 
 }
