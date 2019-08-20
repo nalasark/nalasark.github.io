@@ -5,6 +5,14 @@ body {
 height:100%;
 }
 
+/* Reset */
+html, body, h1, p, a, div, section {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
 #main_outer {
   background-image: url(images/bg-tmw.jpg);
   background-position: 80% 100%;
@@ -44,7 +52,7 @@ height:100%;
   padding:3%;
   text-align: center;
   font-size: 25px;
-  font-weight: 100;
+  font-weight: bold;
   font-family: 'Open Sans';
 }
 
@@ -130,6 +138,7 @@ height:100%;
 
 @media only screen and (max-height: 1200px) {
   #title {font-size:25px;}
+  #scrollText{ font-size:16px;}
   .work .details #work_title { font-size:20px; margin-bottom:0px;}
   .work .details p { font-size:15px; }
   .work .details #medium { font-size:10px; margin-top:0px;}
@@ -138,6 +147,7 @@ height:100%;
 }
 @media only screen and (max-height: 1030px) {
   #title {font-size:25px;}
+  #scrollText{ font-size:16px;}
   .work .details #work_title { font-size:20px; margin-bottom:0px;}
   .work .details p { font-size:16px;}
   .work .details #medium { font-size:12px; margin-top:0px;}
@@ -145,85 +155,94 @@ height:100%;
   .work .details #award { font-size:14px; margin-top:0px;}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.center-con {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media only screen and (max-width: 750px) {
+  #title {font-size:20px; padding:5%;}
+  #scrollText{ font-size:16px;}
+  .work {padding-bottom: 3%;}
+  .work .details #work_title { font-size:18px; margin-bottom:0px;}
+  .work .details p { font-size:15px; }
+  .work .details #medium { font-size:10px; margin-top:0px;}
+  .work .details #from { font-size:12px; margin-bottom:0px;}
+  .work .details #award { font-size:12px; margin-top:0px;}
 }
 
-.round {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
+.arrow {
+  text-decoration: none;
+  font-family: "Open Sans";
+  color: black;
+  transition: opacity .3s;
 }
 
-.round span {
-    z-index: 999;
-    height: 2px;
-    margin:1px;
-    width: 25px;
-    background: black;
-    transition: 0.4s ease;
+.arrow:hover {
+  opacity: .5;
 }
 
-.round span:first-child {
-  height: 1px;
-    display: block;
-    position: absolute;
-    transform: rotate(45deg);
-    left: -2%;
-    bottom: 45%;
+.arrow a {
+  position: absolute;
+  bottom: 40%;
+
+  left: 50%;
+}
+#arrowbar #scrollText{
+  position: absolute;
+  bottom: 40%;
+
+  margin-bottom: -80px;
+  width: 100%;
 }
 
-.round span:nth-child(2) {
-  height: 1px;
-    display: block;
-    position: absolute;
-    transform: rotate(-45deg);
-    left: 37%;
-    bottom: 45%;
+#arrowbar a #icon {
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 50px;
+  margin-left: -15px;
+  border: 2px solid black;
+  border-radius: 50px;
+  box-sizing: border-box;
 }
-
-.round span:nth-child(3) {
-    display: block;
-    position: absolute;
-    transform: rotate(45deg);
-    left: -2%;
-    bottom: 20%;
+#arrowbar a #icon::before {
+  position: absolute;
+  top: 10px;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: black;
+  border-radius: 100%;
+  -webkit-animation: sdb10 2s infinite;
+  animation: sdb10 2s infinite;
+  box-sizing: border-box;
 }
-
-.round span:nth-child(4) {
-    display: block;
-    position: absolute;
-    transform: rotate(-45deg);
-    left: 37%;
-    bottom: 20%;
+@-webkit-keyframes sdb10 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
-.round:hover span:nth-child(1) {
-    transform: rotate(-135deg);
-}
-
-.round:hover span:nth-child(2) {
-    transform: rotate(135deg);
-}
-
-.round:hover span:nth-child(3) {
-    transform: rotate(-135deg);
-}
-
-.round:hover span:nth-child(4) {
-    transform: rotate(135deg);
+@keyframes sdb10 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
