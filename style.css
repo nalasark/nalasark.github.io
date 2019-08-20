@@ -41,10 +41,11 @@ height:100%;
 }
 
 #title {
-  padding:2%;
+  padding:3%;
   text-align: center;
-  font-size: 40px;
-  font-family: 'Lora', serif;
+  font-size: 25px;
+  font-weight: 100;
+  font-family: 'Open Sans';
 }
 
 .works {
@@ -62,7 +63,6 @@ height:100%;
   flex-direction: row;
   flex-direction: column;
   margin-bottom:2%;
-
 }
 .work img{
   width:30vw;
@@ -79,10 +79,10 @@ height:100%;
   flex-direction: column;
 }
 .work .details #work_title {
-  font-family: 'Lora', serif;
+  font-family: 'Open Sans', serif;
   margin: 1%;
   margin-top:0%;
-  font-size: 32px;
+  font-size: 20px;
 }
 .work .details p {
   margin: 1%;
@@ -91,7 +91,7 @@ height:100%;
 }
 .work .details #medium {
   font-style: italic;
-  font-size:18px;
+  font-size:12px;
 }
 .work .details #from {
   font-size:18px;
@@ -130,9 +130,9 @@ height:100%;
 
 @media only screen and (max-height: 1200px) {
   #title {font-size:25px;}
-  .work .details #work_title { font-size:25px; margin-bottom:0px;}
+  .work .details #work_title { font-size:20px; margin-bottom:0px;}
   .work .details p { font-size:15px; }
-  .work .details #medium { font-size:12px; margin-top:0px;}
+  .work .details #medium { font-size:10px; margin-top:0px;}
   .work .details #from { font-size:12px; margin-bottom:0px;}
   .work .details #award { font-size:12px; margin-top:0px;}
 }
@@ -140,7 +140,7 @@ height:100%;
   #title {font-size:25px;}
   .work .details #work_title { font-size:20px; margin-bottom:0px;}
   .work .details p { font-size:16px;}
-  .work .details #medium { font-size:14px; margin-top:0px;}
+  .work .details #medium { font-size:12px; margin-top:0px;}
   .work .details #from { font-size:14px; margin-bottom:0px;}
   .work .details #award { font-size:14px; margin-top:0px;}
 }
